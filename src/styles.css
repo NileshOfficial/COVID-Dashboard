@@ -22,6 +22,8 @@
 body {
     font-family: "Montserrat", sans-serif;
     font-size: 10px;
+    margin: 0;
+    background-color: #F7F7F7;
 }
 
 a {
@@ -29,4 +31,5 @@ a {
     color: inherit;
     font-weight: inherit;
     font-size: inherit;
+    cursor: pointer;
 }
