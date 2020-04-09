@@ -1,1 +1,8 @@
-<p>recovery-tracker works!</p>
+<div class="card">
+    <h3>Ratio of Recovery</h3>
+    <div class="pie">
+        <span class="percentage">{{(recoveredCount / affectedCount) * 100}}%</span>
+    </div>
+    <span class="count affectedCount">{{affectedCount}} Affected</span>
+    <span class="count recoveredCount">{{recoveredCount}} Recovered</span>
+</div>
