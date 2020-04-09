@@ -1,0 +1,4 @@
+.dashboardGrid {
+    display: grid;
+    grid-gap: 2rem 2rem;
+}

@@ -1,4 +1,5 @@
 header {
+    box-sizing: border-box;
     padding: 1rem 3rem;
     text-transform: uppercase;
     position: relative;
@@ -48,7 +49,7 @@ header nav {
 }
 
 .content {
-    padding: 2rem 3rem;
+    padding: 2rem;
 }
 
 .content.container {
