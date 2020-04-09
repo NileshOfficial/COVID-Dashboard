@@ -1,1 +1,7 @@
-<p>case-count works!</p>
+<div class="card">
+    <div class="count">
+        <span [ngClass]="{rise: rise, decline: !rise}">{{countType}}</span>
+        <h3>{{count}}</h3>
+    </div>
+    <img src="../../../assets/images/Graph-2.svg">
+</div>

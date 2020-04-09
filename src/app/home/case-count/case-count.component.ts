@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'covid-case-count',
@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CaseCountComponent implements OnInit {
 
+  @Input('heading') countType: string = '';
+  @Input() count: number = 0;
+  @Input() rise: boolean = true;
+  
   constructor() { }
 
   ngOnInit(): void {
