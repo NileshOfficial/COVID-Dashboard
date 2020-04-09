@@ -1,0 +1,58 @@
+header {
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    position: relative;
+    width: 100%;
+    box-shadow: 0px 5px 20px #686C8526;
+    background-color: #FFF;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #FF0019;
+}
+
+.logo span{
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+
+header nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navlink {
+    font-size: 1.4rem;
+    color: #52586A;
+    margin-right: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 1.3rem;
+    font-weight: 500;
+    border-bottom: 5px solid transparent;
+    transition: ease-in-out 0.2s;
+}
+
+.navlink:last-child {
+    margin-right: 0;
+}
+
+.active {
+    color: #FF0019;
+    border-bottom: 5px solid #FF0019;
+}
+
+.content {
+    padding: 2rem 3rem;
+}
+
+.content.container {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
