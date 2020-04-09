@@ -1,7 +1,7 @@
 <div class="card">
     <div class="count">
         <span [ngClass]="{rise: rise, decline: !rise}">{{countType}}</span>
-        <h3>{{count}}</h3>
+        <h3>{{count | numberFormat}}</h3>
     </div>
-    <img src="../../../assets/images/Graph-2.svg">
+    <img class="trend" src="../../../assets/images/Graph-2.svg">
 </div>

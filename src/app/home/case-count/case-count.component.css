@@ -1,5 +1,6 @@
 .card {
     display: flex;
+    justify-content: space-between;
     background: #FFF;
     box-sizing: border-box;
     padding: 3rem 2.5rem;
@@ -41,4 +42,8 @@
     width: 1rem;
     background: url('../../../assets/images/Down-2.svg') no-repeat center center;
     margin-left: 0.2rem;
+}
+
+.card .trend {
+    text-align: right;
 }
