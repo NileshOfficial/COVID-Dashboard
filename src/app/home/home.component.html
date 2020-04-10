@@ -1,9 +1,21 @@
-<div class="dashboardGrid">
-    <covid-case-count style="grid-column: 1; grid-row: 1;" heading="something" [count]="24324242" [rise]="false"></covid-case-count>
-    <covid-case-count style="grid-column: 2; grid-row: 1;" heading="something" [count]="24324242" [rise]="false"></covid-case-count>
-    <covid-case-count style="grid-column: 3; grid-row: 1;" heading="something" [count]="24324242" [rise]="false"></covid-case-count>
-    <covid-case-count style="grid-column: 4; grid-row: 1;" heading="something" [count]="24324242" [rise]="false"></covid-case-count>
-    <covid-recovery-tracker style="grid-column-start: 5; grid-row-start: 1; grid-row-start: 1; grid-row-end: 3; " [affectedCount]="88324" [recoveredCount]="234234"></covid-recovery-tracker>
-    <covid-country-wise-records style="grid-column-start: 1; grid-column-end: 3; grid-row-start: 2; grid-row-end: 4;"></covid-country-wise-records>
+<div class="container pt-5 pb-5">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="row">
+                <covid-case-count class="col-md-3 mb-5" heading="something" [count]="24324242" [rise]="false">
+                </covid-case-count>
+                <covid-case-count class="col-md-3 mb-5" heading="something" [count]="24324242" [rise]="false">
+                </covid-case-count>
+                <covid-case-count class="col-md-3 mb-5" heading="something" [count]="24324242" [rise]="false">
+                </covid-case-count>
+                <covid-case-count class="col-md-3 mb-5" heading="something" [count]="24324242" [rise]="false">
+                </covid-case-count>
+                <covid-country-wise-records class="col-md-5"></covid-country-wise-records>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <covid-recovery-tracker class="col-md-4" [affectedCount]="88324" [recoveredCount]="234234">
+            </covid-recovery-tracker>
+        </div>
+    </div>
 </div>
-
