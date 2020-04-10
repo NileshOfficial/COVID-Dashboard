@@ -1,0 +1,78 @@
+.card {
+    background-color: #FFF;
+    box-sizing: border-box;
+    color: #30313A;
+    padding: 1.5rem 2rem;
+    box-shadow: 0px 5px 20px #1425401A;
+    border-radius: 8px;
+}
+
+.search {
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid #bcbcbc;
+    background-color: #F5F5F5;
+    padding: 1rem;
+    border-radius: 4rem;
+    text-align: left;
+    width: 100%;
+}
+
+.search > img {
+    display: inline-block;
+    margin-bottom: -3px;
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+    height: 14px;
+    width: 14px;
+}
+
+.search > input[type="text"] {
+    background-color: #F5F5F5;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: calc(100% - 40px);
+}
+
+.countryData {
+    list-style: none;
+    padding: 0;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+.countryData .card {
+    margin-bottom: 1rem;
+    box-shadow: 0px 5px 7px #1425401A;
+}
+
+.countryData .card .countryStats span:first-child {
+    display: inline-block;
+    justify-content: space-between;
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 100%;
+}
+
+.rise::after {
+    display: inline-block;
+    content: url('../../../assets/images/Up-1.svg');
+    position: absolute;
+    right: 0;
+    bottom: -0.7rem;
+ }
+
+.decline::after {
+    display: inline-block;
+    content: url('../../../assets/images/Down-2.svg');
+    position: absolute;
+    right: 0;
+    bottom: -0.7rem;
+}
+
+.countryData .card .countryStats span:last-child {
+    font-size: 1.2rem;
+    font-size: 1rem;
+}
