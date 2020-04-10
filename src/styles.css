@@ -19,9 +19,12 @@
     font-style: normal;
 }
 
+html {
+    font-size: 10px;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
-    font-size: 10px;
     margin: 0;
     background-color: #F7F7F7;
 }
