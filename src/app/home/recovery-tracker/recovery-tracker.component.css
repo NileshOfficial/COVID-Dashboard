@@ -17,8 +17,8 @@
 
 .card > .pie {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     border: 1px solid green;
     margin: 1.6rem auto;
     border-radius: 50%;
@@ -31,12 +31,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     display: inline-block;
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
     text-align: center;
-    line-height: 200px;
-    font-size: 24px;
+    line-height: 100px;
+    font-size: 1.6rem;
     font-weight: 500;
     background-color: #FFF;
 }
