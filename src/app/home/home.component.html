@@ -1,21 +1,19 @@
-<div class="container pt-5 pb-5">
-    <div class="row">
-        <div class="col-md-9">
-            <div class="row">
-                <covid-case-count class="col-md-3 mb-5" heading="something" [count]="24324242" [rise]="false">
-                </covid-case-count>
-                <covid-case-count class="col-md-3 mb-5" heading="something" [count]="24324242" [rise]="false">
-                </covid-case-count>
-                <covid-case-count class="col-md-3 mb-5" heading="something" [count]="24324242" [rise]="false">
-                </covid-case-count>
-                <covid-case-count class="col-md-3 mb-5" heading="something" [count]="24324242" [rise]="false">
-                </covid-case-count>
-                <covid-country-wise-records class="col-md-5"></covid-country-wise-records>
-            </div>
+<div class="row px-4 py-5">
+    <div class="col-md-9">
+        <div class="row">
+            <covid-case-count class="col-md-3 mb-5" heading="something" [count]="24324242" [rise]="false">
+            </covid-case-count>
+            <covid-case-count class="col-md-3 mb-5" heading="something" [count]="24324242" [rise]="false">
+            </covid-case-count>
+            <covid-case-count class="col-md-3 mb-5" heading="something" [count]="24324242" [rise]="false">
+            </covid-case-count>
+            <covid-case-count class="col-md-3 mb-5" heading="something" [count]="24324242" [rise]="false">
+            </covid-case-count>
+            <covid-country-wise-records class="col-md-5 mb-5"></covid-country-wise-records>
         </div>
-        <div class="col-md-3">
-            <covid-recovery-tracker class="col-md-4" [affectedCount]="88324" [recoveredCount]="234234">
-            </covid-recovery-tracker>
-        </div>
+    </div>
+    <div class="col-md-3">
+        <covid-recovery-tracker [affectedCount]="88324" [recoveredCount]="234234">
+        </covid-recovery-tracker>
     </div>
 </div>
