@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CaseCountComponent } from './home/case-count/case-count.component';
 import { RecoveryTrackerComponent } from './home/recovery-tracker/recovery-tracker.component'
-import { NumberFormatPipe } from './pipes/number-format.pipe'
+import { NumberFormatPipe } from './pipes/number-format.pipe';
+import { CountryWiseRecordsComponent } from './home/country-wise-records/country-wise-records.component'
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { NumberFormatPipe } from './pipes/number-format.pipe'
     HomeComponent,
     CaseCountComponent,
     RecoveryTrackerComponent,
+    CountryWiseRecordsComponent,
     NumberFormatPipe
   ],
   imports: [
