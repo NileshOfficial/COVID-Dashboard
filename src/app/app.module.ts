@@ -10,7 +10,8 @@ import { NumberFormatPipe } from './pipes/number-format.pipe';
 import { CountryWiseRecordsComponent } from './home/country-wise-records/country-wise-records.component';
 import { WorldMapComponent } from './home/world-map/world-map.component';
 import { LineChartComponent } from './charts/line-chart/line-chart.component';
-import { TrendComponent } from './home/trend/trend.component'
+import { TrendComponent } from './home/trend/trend.component';
+import { ActiveChildEmphasisDirective } from './directives/active-child-emphasis.directive'
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { TrendComponent } from './home/trend/trend.component'
     WorldMapComponent,
     LineChartComponent,
     TrendComponent,
+    ActiveChildEmphasisDirective,
     NumberFormatPipe
   ],
   imports: [
