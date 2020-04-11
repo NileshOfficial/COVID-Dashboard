@@ -8,6 +8,15 @@
         </span>
     </div>
     <div class="trend">
+        <canvas baseChart
+                [datasets]="lineChartData"
+                [labels]="lineChartLabels"
+                [options]="lineChartOptions"
+                [colors]="lineChartColors"
+                [legend]="lineChartLegend"
+                [chartType]="lineChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
         <span class="stats">
             <span class="trendType">Confirmed</span>
             <span class="date">01 April</span>
