@@ -62,12 +62,17 @@
 .map .search {
     height: 25px;
     width: 25px;
+    padding: 5px;
     border: none;
     background-color: #DDD;
     cursor: pointer;
     position: absolute;
     top: 15px;
     left: 15px;
+}
+
+.map .search:focus {
+    outline: none;
 }
 
 .map .search img {
