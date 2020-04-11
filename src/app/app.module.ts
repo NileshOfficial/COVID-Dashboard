@@ -9,7 +9,8 @@ import { RecoveryTrackerComponent } from './home/recovery-tracker/recovery-track
 import { NumberFormatPipe } from './pipes/number-format.pipe';
 import { CountryWiseRecordsComponent } from './home/country-wise-records/country-wise-records.component';
 import { WorldMapComponent } from './home/world-map/world-map.component';
-import { LineChartComponent } from './charts/line-chart/line-chart.component'
+import { LineChartComponent } from './charts/line-chart/line-chart.component';
+import { TrendComponent } from './home/trend/trend.component'
 
 @NgModule({
   declarations: [
@@ -19,8 +20,9 @@ import { LineChartComponent } from './charts/line-chart/line-chart.component'
     RecoveryTrackerComponent,
     CountryWiseRecordsComponent,
     WorldMapComponent,
-    NumberFormatPipe,
-    LineChartComponent
+    LineChartComponent,
+    TrendComponent,
+    NumberFormatPipe
   ],
   imports: [
     BrowserModule,
