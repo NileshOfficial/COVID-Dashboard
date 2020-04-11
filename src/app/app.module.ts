@@ -9,7 +9,6 @@ import { RecoveryTrackerComponent } from './home/recovery-tracker/recovery-track
 import { NumberFormatPipe } from './pipes/number-format.pipe';
 import { CountryWiseRecordsComponent } from './home/country-wise-records/country-wise-records.component';
 import { WorldMapComponent } from './home/world-map/world-map.component';
-import { LineChartComponent } from './charts/line-chart/line-chart.component';
 import { TrendComponent } from './home/trend/trend.component';
 import { ActiveEmphasisDirective } from './directives/active-emphasis.directive';
 import { CarouselComponent } from './home/carousel/carousel.component'
@@ -22,7 +21,6 @@ import { CarouselComponent } from './home/carousel/carousel.component'
     RecoveryTrackerComponent,
     CountryWiseRecordsComponent,
     WorldMapComponent,
-    LineChartComponent,
     TrendComponent,
     CarouselComponent,
     ActiveEmphasisDirective,

@@ -27,9 +27,7 @@
               "node_modules/bootstrap/dist/css/bootstrap-grid.min.css",
               "src/styles.css"
             ],
-            "scripts": [
-              "src/assets/js/loader.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
