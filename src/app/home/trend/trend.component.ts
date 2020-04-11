@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'covid-trend',
@@ -10,6 +11,7 @@ export class TrendComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+RouterLinkActive
   }
 
 }

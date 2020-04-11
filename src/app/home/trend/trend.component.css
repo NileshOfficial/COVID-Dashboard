@@ -1,0 +1,71 @@
+.card {
+    box-sizing: border-box;
+    background-color: #FFF;
+    color: #30313A;
+    padding: 2rem;
+    box-shadow: 0px 5px 20px #1425401A;
+    border-radius: 8px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.header h3{
+    font-size: 1.4rem;
+    text-transform: capitalize;
+}
+
+.header .btnGroup {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #F5F5F5;
+    border-radius: 8px;
+}
+
+.header .btnGroup > a {
+    padding: 0.8rem 1rem;
+    text-transform: capitalize;
+}
+
+.header .btnGroup .active {
+    background-color: #52586A;
+    color: #FFF;
+    border-radius: 8px;
+}
+
+.trend {
+    position: relative;
+}
+
+.trend .stats {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #FF0019;
+}
+
+.trend .stats .trendType,
+.trend .stats .date {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 400;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.trend .stats .count {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+}
+
+.trend .stats .count .change {
+    font-weight: 600;
+    font-size: 1rem;
+}

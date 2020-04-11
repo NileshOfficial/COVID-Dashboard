@@ -1,0 +1,23 @@
+<div class="card">
+    <div class="header">
+        <h3>Spread Trends</h3>
+        <span class="btnGroup" activeChildEmphasis>
+            <a [activeEmphasis]="'active'">Confirmed</a>
+            <a [activeEmphasis]="'active'">Recovered</a>
+            <a [activeEmphasis]="'active'">Deceased</a>
+        </span>
+    </div>
+    <div class="trend">
+        <line-chart></line-chart>
+        <span class="stats">
+            <span class="trendType">Confirmed</span>
+            <span class="date">01 April</span>
+            <span class="count">
+                {{878500 | numberFormat:'k'}}
+                <span class="change">
+                    +{{136900 | numberFormat:'k'}}
+                </span>
+            </span>
+        </span>
+    </div>
+</div>
