@@ -8,7 +8,8 @@ import { CaseCountComponent } from './home/case-count/case-count.component';
 import { RecoveryTrackerComponent } from './home/recovery-tracker/recovery-tracker.component'
 import { NumberFormatPipe } from './pipes/number-format.pipe';
 import { CountryWiseRecordsComponent } from './home/country-wise-records/country-wise-records.component';
-import { WorldMapComponent } from './home/world-map/world-map.component'
+import { WorldMapComponent } from './home/world-map/world-map.component';
+import { LineChartComponent } from './charts/line-chart/line-chart.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { WorldMapComponent } from './home/world-map/world-map.component'
     RecoveryTrackerComponent,
     CountryWiseRecordsComponent,
     WorldMapComponent,
-    NumberFormatPipe
+    NumberFormatPipe,
+    LineChartComponent
   ],
   imports: [
     BrowserModule,
