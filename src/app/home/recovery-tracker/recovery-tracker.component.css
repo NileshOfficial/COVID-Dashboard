@@ -10,7 +10,6 @@
 
 .card > h3 {
     color: #30313A;
-    margin-top: 1rem;
     font-size: 1.8rem;
     font-weight: 600;
 }
@@ -20,7 +19,7 @@
     width: 200px;
     height: 200px;
     border: 1px solid green;
-    margin: 1.6rem auto;
+    margin: 2rem auto;
     border-radius: 50%;
     background-color: #F5F5F5;
 }
