@@ -1,0 +1,28 @@
+.card {
+    box-sizing: border-box;
+    background-color: #FFF;
+    color: #30313A;
+    padding: 2rem;
+    box-shadow: 0px 5px 20px #1425401A;
+    border-radius: 8px;
+}
+
+.heading {
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.heading::after {
+    content: url('../../../assets/images/Twweter.svg');
+    display: inline-block;
+    margin-left: 0.5rem;
+    position: relative;
+    bottom: -3px;
+}
+
+.tweets {
+    margin-top: 1rem;
+    max-height: 380px;
+    overflow-y: scroll;
+}

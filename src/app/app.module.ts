@@ -13,7 +13,7 @@ import { WorldMapComponent } from './home/world-map/world-map.component';
 import { TrendComponent } from './home/trend/trend.component';
 import { ActiveEmphasisDirective } from './directives/active-emphasis.directive';
 import { CarouselComponent } from './home/carousel/carousel.component';
-import { TweetsComponent } from './home/tweets/tweets.component'
+import { TweetsComponent } from './home/tweets/tweets.component';
 
 @NgModule({
   declarations: [
