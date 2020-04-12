@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AccordianComponent } from './accordian/accordian.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AccordianComponent
   ],
   imports: [
     BrowserModule,
