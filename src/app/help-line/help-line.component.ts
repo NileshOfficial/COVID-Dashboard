@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faGlobeAmericas, faHandHoldingUsd, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'covid-help-line',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./help-line.component.css']
 })
 export class HelpLineComponent implements OnInit {
+
+  linkIcon: IconDefinition = faGlobeAmericas;
+  donateIcon: IconDefinition = faHandHoldingUsd;
 
   constructor() { }
 
