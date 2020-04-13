@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ChartsModule } from 'ng2-charts';
-
 import { AppRoutingModule } from './app-routing.module';
+import { ChartsModule } from 'ng2-charts';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CaseCountComponent } from './home/case-count/case-count.component';
@@ -15,6 +16,7 @@ import { ActiveEmphasisDirective } from './directives/active-emphasis.directive'
 import { CarouselComponent } from './home/carousel/carousel.component';
 import { TweetsComponent } from './home/tweets/tweets.component';
 import { AccordianComponent } from './accordian/accordian.component';
+import { HelpLineComponent } from './help-line/help-line.component';
 
 @NgModule({
   declarations: [
@@ -29,12 +31,14 @@ import { AccordianComponent } from './accordian/accordian.component';
     ActiveEmphasisDirective,
     TweetsComponent,
     AccordianComponent,
+    HelpLineComponent,
     NumberFormatPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ChartsModule
+    ChartsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
