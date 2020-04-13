@@ -1,0 +1,52 @@
+.card {
+    text-align: center;
+}
+
+.card > h3 {
+    color: #30313A;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.card > .pie {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 1px solid green;
+    margin: 2rem auto;
+    border-radius: 50%;
+    background-color: #F5F5F5;
+}
+
+.card > .pie .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    background-color: #FFF;
+}
+
+.card > .count {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #52586A;
+    text-transform: capitalize;
+}
+
+.card .affectedCount {
+    padding-right: 1rem;
+    border-right: 1px solid #52586A;
+}
+
+.card .recoveredCount {
+    padding-left: 1rem;
+}

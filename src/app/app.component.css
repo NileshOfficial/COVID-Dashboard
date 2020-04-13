@@ -1,4 +1,5 @@
 header {
+    box-sizing: border-box;
     padding: 1rem 3rem;
     text-transform: uppercase;
     position: relative;
@@ -45,10 +46,6 @@ header nav {
 .active {
     color: #FF0019;
     border-bottom: 5px solid #FF0019;
-}
-
-.content {
-    padding: 2rem 3rem;
 }
 
 .content.container {

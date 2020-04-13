@@ -1,0 +1,19 @@
+.heading {
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.heading::after {
+    content: url('../../../assets/images/Twweter.svg');
+    display: inline-block;
+    margin-left: 0.5rem;
+    position: relative;
+    bottom: -3px;
+}
+
+.tweets {
+    margin-top: 1rem;
+    max-height: 380px;
+    overflow-y: scroll;
+}

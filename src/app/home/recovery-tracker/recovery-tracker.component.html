@@ -1,0 +1,8 @@
+<div class="card">
+    <h3>Ratio of Recovery</h3>
+    <div class="pie">
+        <span class="percentage">{{((recoveredCount / affectedCount) * 100) | numberFormat:"setPrecision":1}}%</span>
+    </div>
+    <span class="count affectedCount">{{affectedCount | numberFormat:"k"}} Affected</span>
+    <span class="count recoveredCount">{{recoveredCount | numberFormat:"k"}} Recovered</span>
+</div>
