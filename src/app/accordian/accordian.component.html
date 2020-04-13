@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-md-7">
+        <div class="card" *ngFor="let item of data; let i = index;">
+            <h3 class="header" [ngClass]="{'close activeTab': currentTab === i, 'open': currentTab !== i}"
+                (click)="changeCurrentTab(i)">
+                {{item.question}}
+            </h3>
+            <p *ngIf="currentTab === i" class="description">
+                {{item.answer}}
+            </p>
+        </div>
+    </div>
+    <div class="col-md-5">
+        <p class="banner">
+            Frequently Asked Questions
+        </p>
+    </div>
+</div>

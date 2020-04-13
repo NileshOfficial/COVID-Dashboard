@@ -14,6 +14,7 @@ import { TrendComponent } from './home/trend/trend.component';
 import { ActiveEmphasisDirective } from './directives/active-emphasis.directive';
 import { CarouselComponent } from './home/carousel/carousel.component';
 import { TweetsComponent } from './home/tweets/tweets.component';
+import { AccordianComponent } from './accordian/accordian.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { TweetsComponent } from './home/tweets/tweets.component';
     CarouselComponent,
     ActiveEmphasisDirective,
     TweetsComponent,
+    AccordianComponent,
     NumberFormatPipe
   ],
   imports: [
