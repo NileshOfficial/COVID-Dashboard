@@ -1,14 +1,21 @@
 <header>
-  <div class="logo">
-    <a [routerLink]="['/']">
-      <img src="../assets/images/virus.svg" alt="Virus">
-      <span>covid'19</span>
-    </a>
-  </div>
+  <a class="logo" [routerLink]="['/']">
+    <img src="../assets/images/virus.svg" alt="Virus">
+    <span>covid'19</span>
+  </a>
   <nav>
-    <a [routerLink]="['/Dashboard']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="navlink">home</a>
-    <a [routerLink]="['/FrequentQuestions']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="navlink">faq</a>
-    <a [routerLink]="['/HelpLinks']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="navlink">helpful links</a>
+    <ul>
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="navlink">
+        <a [routerLink]="['/Dashboard']">home</a>
+      </li>
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="navlink">
+        <a [routerLink]="['/FrequentQuestions']">faq</a>
+      </li>
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="navlink">
+        <a [routerLink]="['/HelpLinks']">helpful
+          links</a>
+      </li>
+    </ul>
   </nav>
 </header>
 <main class="content container">

@@ -1,6 +1,8 @@
 header {
     box-sizing: border-box;
-    padding: 1rem 3rem;
+    min-height: 60px;
+    padding-left: 3rem;
+    padding-right: 3rem;
     text-transform: uppercase;
     position: relative;
     width: 100%;
@@ -9,11 +11,13 @@ header {
 }
 
 .logo {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     font-size: 2.2rem;
     font-weight: 600;
     color: #FF0019;
+    outline: none;
+    margin-top: 7px;
 }
 
 .logo span{
@@ -26,26 +30,43 @@ header nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    height: 100%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    margin: 0;
+    height: 100%;
 }
 
 .navlink {
     font-size: 1.4rem;
     color: #52586A;
     margin-right: 4rem;
-    padding-top: 1rem;
-    padding-bottom: 1.3rem;
     font-weight: 500;
     border-bottom: 5px solid transparent;
     transition: ease-in-out 0.2s;
+    height: 100%;
+    line-height: 60px;
 }
 
 .navlink:last-child {
     margin-right: 0;
 }
 
+.navlink a {
+    outline: none;
+}
+
 .active {
     color: #FF0019;
     border-bottom: 5px solid #FF0019;
+}
+
+.active a {
+    cursor: initial;
 }
 
 .content.container {
