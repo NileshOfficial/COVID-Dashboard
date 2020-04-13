@@ -17,6 +17,7 @@ import { CarouselComponent } from './home/carousel/carousel.component';
 import { TweetsComponent } from './home/tweets/tweets.component';
 import { AccordianComponent } from './accordian/accordian.component';
 import { HelpLineComponent } from './help-line/help-line.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { HelpLineComponent } from './help-line/help-line.component';
     TweetsComponent,
     AccordianComponent,
     HelpLineComponent,
-    NumberFormatPipe
+    NumberFormatPipe,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
