@@ -6,8 +6,7 @@ import { globalCasesData } from './response.model';
 @Injectable({
     providedIn: 'root'
 })
-
-export class HttpUtil {
+export class HttpService {
     constructor(private http: HttpClient) { }
 
     getGlobalCasesCount() {

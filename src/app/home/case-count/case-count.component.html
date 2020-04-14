@@ -1,7 +1,11 @@
 <div class="card">
     <div class="count">
-        <span [ngClass]="{rise: rise, decline: !rise}">{{countType}}</span>
-        <h3>{{count | numberFormat}}</h3>
+        <span> 
+            {{countType}} 
+            <fa-icon *ngIf="count" [ngStyle]="{color: indicatorConfig[0]}" [icon]="indicatorConfig[1]">
+            </fa-icon>
+        </span>
+        <h3>{{ count ? (count | numberFormat) : '...'}}</h3>
     </div>
     <img class="trend" src="../../../assets/images/Graph-2.svg">
 </div>

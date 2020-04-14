@@ -1,13 +1,13 @@
 <div class="row px-4 py-5">
     <div class="col-md-9">
         <div class="row">
-            <covid-case-count class="col-md-3 mb-5" heading="something" [count]="24324242" [rise]="false">
+            <covid-case-count class="col-md-3 mb-5" heading="Total Cases" [count]="globalCaseCount.cases" [rise]="trend[0]">
             </covid-case-count>
-            <covid-case-count class="col-md-3 mb-5" heading="something" [count]="24324242" [rise]="false">
+            <covid-case-count class="col-md-3 mb-5" heading="Recovered" [count]="globalCaseCount.recovered" [rise]="trend[1]" [invertTrend]="true">
             </covid-case-count>
-            <covid-case-count class="col-md-3 mb-5" heading="something" [count]="24324242" [rise]="false">
+            <covid-case-count class="col-md-3 mb-5" heading="Active Cases" [count]="globalCaseCount.active" [rise]="trend[2]">
             </covid-case-count>
-            <covid-case-count class="col-md-3 mb-5" heading="something" [count]="24324242" [rise]="false">
+            <covid-case-count class="col-md-3 mb-5" heading="Total Death" [count]="globalCaseCount.deaths" [rise]="trend[3]">
             </covid-case-count>
             <covid-country-wise-records class="col-md-5 mb-5"></covid-country-wise-records>
             <covid-world-map class="col-md-7 mb-5"></covid-world-map>
@@ -17,7 +17,7 @@
     </div>
     <div class="col-md-3">
         <div class="row">
-            <covid-recovery-tracker class="col-md-12 mb-5" [affectedCount]="88324" [recoveredCount]="234234">
+            <covid-recovery-tracker class="col-md-12 mb-5" [affectedCount]="globalCaseCount.cases" [recoveredCount]="globalCaseCount.recovered">
             </covid-recovery-tracker>
             <covid-tweets class="col-md-12 mb-5"></covid-tweets>
         </div>
