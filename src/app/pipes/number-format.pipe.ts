@@ -28,6 +28,8 @@ export class NumberFormatPipe implements PipeTransform {
   }
 
   k(num: number): string {
+    if(num < 1000)
+      return "" + num;
     let kCount =  Math.round(num / 1000);
     return this.csv(kCount) + 'k';
   }

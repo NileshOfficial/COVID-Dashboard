@@ -1,5 +1,6 @@
 .search {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     box-sizing: border-box;
     border: 1px solid #bcbcbc;
     background-color: #F5F5F5;
@@ -9,13 +10,11 @@
     width: 100%;
 }
 
-.search > img {
-    display: inline-block;
-    margin-bottom: -3px;
+.search > fa-icon {
+    font-size: 1.4rem;
     margin-left: 0.5rem;
     margin-right: 1rem;
-    height: 14px;
-    width: 14px;
+    color: inherit;
 }
 
 .search > input[type="text"] {
@@ -35,7 +34,7 @@
 .countryData {
     list-style: none;
     padding: 0;
-    overflow-y: scroll;
+    overflow-y: auto;
     position: absolute;
     top: 0;
     left: 0;
@@ -51,32 +50,46 @@
     width: auto;
 }
 
-.countryData .card .countryStats span:first-child {
-    display: inline-block;
-    justify-content: space-between;
+.countryData .card .countryStats > span:first-child {
+    display: inline-flex;
+    align-items: center;
     position: relative;
     font-size: 1.2rem;
     font-weight: 600;
     width: 100%;
 }
 
-.rise::after {
+.countryData .card .countryStats .flag {
     display: inline-block;
-    content: url('../../../assets/images/Up-1.svg');
-    position: absolute;
-    right: 0;
-    bottom: -0.7rem;
- }
-
-.decline::after {
-    display: inline-block;
-    content: url('../../../assets/images/Down-2.svg');
-    position: absolute;
-    right: 0;
-    bottom: -0.7rem;
+    height: 20px;
+    width: 30px;
+    margin-right: 1rem;
 }
 
-.countryData .card .countryStats span:last-child {
+.countryData .card .countryStats .flag img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.indicator {
+    position: absolute;
+    right: 0;
+    font-size: 1.4rem;
+    bottom: -1rem;
+}
+
+.red {
+    color: #FF0019;
+}
+
+.green {
+    color: #00C566;
+}
+
+.countryData .card .countryStats > span:last-child {
+    display: inline-block;
     font-size: 1.2rem;
-    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 3px;
 }

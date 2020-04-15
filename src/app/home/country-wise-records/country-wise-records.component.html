@@ -1,116 +1,41 @@
 <div class="card">
-    <span class="search">
-        <img src="../../../assets/images/search.svg" alt="">
-        <input type="text" placeholder="Search Location">
-    </span>
+    <div>
+        <span class="search">
+            <fa-icon [icon]="search"></fa-icon>
+            <input (keyup.enter)="searchInput($event)" type="text" placeholder="Search Location">
+        </span>
+        <span class="message"></span>
+    </div>
     <div class="listView">
         <ul class="countryData">
-            <li class="card">
+            <li class="card" *ngIf="searchedRecord.country">
                 <div class="countryStats">
-                    <span class="rise">United States</span>
-                    <span>{{123213 | numberFormat:"k"}} Affected | {{12323 | numberFormat:"k"}} Recovered</span>
+                    <span>
+                        <span class="flag">
+                            <img src={{searchedRecord.flag}} alt=" ">
+                        </span>
+                        {{searchedRecord.country}}
+                        <fa-icon class="indicator"
+                            [ngClass]="{'red': getNumber(searchedRecord.new_cases) > 0, 'green': getNumber(searchedRecord.new_cases) === 0}"
+                            [icon]="getNumber(searchedRecord.new_cases) > 0 ? rise : decline"></fa-icon>
+                    </span>
+                    <span>{{ (getNumber(searchedRecord.total_cases) | numberFormat:"k") + " Affected" }} |
+                        {{ (getNumber(searchedRecord.total_recovered) | numberFormat:"k") + " Recovered" }}</span>
                 </div>
             </li>
-            <li class="card">
+            <li class="card" *ngFor="let stat of countryStats;">
                 <div class="countryStats">
-                    <span class="rise">United States</span>
-                    <span>{{123213 | numberFormat:"k"}} Affected | {{12323 | numberFormat:"k"}} Recovered</span>
-                </div>
-            </li>
-            <li class="card">
-                <div class="countryStats">
-                    <span class="rise">United States</span>
-                    <span>{{123213 | numberFormat:"k"}} Affected | {{12323 | numberFormat:"k"}} Recovered</span>
-                </div>
-            </li>
-            <li class="card">
-                <div class="countryStats">
-                    <span class="rise">United States</span>
-                    <span>{{123213 | numberFormat:"k"}} Affected | {{12323 | numberFormat:"k"}} Recovered</span>
-                </div>
-            </li>
-            <li class="card">
-                <div class="countryStats">
-                    <span class="rise">United States</span>
-                    <span>{{123213 | numberFormat:"k"}} Affected | {{12323 | numberFormat:"k"}} Recovered</span>
-                </div>
-            </li>
-            <li class="card">
-                <div class="countryStats">
-                    <span class="rise">United States</span>
-                    <span>{{123213 | numberFormat:"k"}} Affected | {{12323 | numberFormat:"k"}} Recovered</span>
-                </div>
-            </li>
-            <li class="card">
-                <div class="countryStats">
-                    <span class="rise">United States</span>
-                    <span>{{123213 | numberFormat:"k"}} Affected | {{12323 | numberFormat:"k"}} Recovered</span>
-                </div>
-            </li>
-            <li class="card">
-                <div class="countryStats">
-                    <span class="rise">United States</span>
-                    <span>{{123213 | numberFormat:"k"}} Affected | {{12323 | numberFormat:"k"}} Recovered</span>
-                </div>
-            </li>
-            <li class="card">
-                <div class="countryStats">
-                    <span class="rise">United States</span>
-                    <span>{{123213 | numberFormat:"k"}} Affected | {{12323 | numberFormat:"k"}} Recovered</span>
-                </div>
-            </li>
-            <li class="card">
-                <div class="countryStats">
-                    <span class="rise">United States</span>
-                    <span>{{123213 | numberFormat:"k"}} Affected | {{12323 | numberFormat:"k"}} Recovered</span>
-                </div>
-            </li>
-            <li class="card">
-                <div class="countryStats">
-                    <span class="rise">United States</span>
-                    <span>{{123213 | numberFormat:"k"}} Affected | {{12323 | numberFormat:"k"}} Recovered</span>
-                </div>
-            </li>
-            <li class="card">
-                <div class="countryStats">
-                    <span class="rise">United States</span>
-                    <span>{{123213 | numberFormat:"k"}} Affected | {{12323 | numberFormat:"k"}} Recovered</span>
-                </div>
-            </li>
-            <li class="card">
-                <div class="countryStats">
-                    <span class="rise">United States</span>
-                    <span>{{123213 | numberFormat:"k"}} Affected | {{12323 | numberFormat:"k"}} Recovered</span>
-                </div>
-            </li>
-            <li class="card">
-                <div class="countryStats">
-                    <span class="rise">United States</span>
-                    <span>{{123213 | numberFormat:"k"}} Affected | {{12323 | numberFormat:"k"}} Recovered</span>
-                </div>
-            </li>
-            <li class="card">
-                <div class="countryStats">
-                    <span class="rise">United States</span>
-                    <span>{{123213 | numberFormat:"k"}} Affected | {{12323 | numberFormat:"k"}} Recovered</span>
-                </div>
-            </li>
-            <li class="card">
-                <div class="countryStats">
-                    <span class="rise">United States</span>
-                    <span>{{123213 | numberFormat:"k"}} Affected | {{12323 | numberFormat:"k"}} Recovered</span>
-                </div>
-            </li>
-            <li class="card">
-                <div class="countryStats">
-                    <span class="rise">United States</span>
-                    <span>{{123213 | numberFormat:"k"}} Affected | {{12323 | numberFormat:"k"}} Recovered</span>
-                </div>
-            </li>
-            <li class="card">
-                <div class="countryStats">
-                    <span class="rise">United States</span>
-                    <span>{{123213 | numberFormat:"k"}} Affected | {{12323 | numberFormat:"k"}} Recovered</span>
+                    <span>
+                        <span class="flag">
+                            <img src={{stat.flag}} alt=" ">
+                        </span>
+                        {{stat.country}}
+                        <fa-icon class="indicator"
+                            [ngClass]="{'red': getNumber(stat.new_cases) > 0, 'green': getNumber(stat.new_cases) === 0}"
+                            [icon]="getNumber(stat.new_cases) > 0 ? rise : decline"></fa-icon>
+                    </span>
+                    <span>{{ (getNumber(stat.total_cases) | numberFormat:"k") + " Affected" }} |
+                        {{ (getNumber(stat.total_recovered) | numberFormat:"k") + " Recovered" }}</span>
                 </div>
             </li>
         </ul>

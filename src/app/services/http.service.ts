@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { url } from './http.config';
-import { globalCasesData } from './response.model';
+import { globalCasesData, countryWiseStats, countryStatsRow } from './response.model';
 import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
@@ -10,7 +11,7 @@ import { map } from 'rxjs/operators';
 export class HttpService {
     constructor(private http: HttpClient) { }
 
-    getGlobalCasesCount() {
+    getGlobalCasesCount(): Observable<globalCasesData> {
         return this.http.get<globalCasesData>(url.globalCasesCountUrl).pipe(map(res => {
             return {
                 cases: res.cases,
@@ -21,8 +22,20 @@ export class HttpService {
         }));
     }
 
-    getCountryWiseCasesCount() {
-        return this.http.get(url.countryWiseCasesCountUrl);
+    getCountryWiseCasesCount(): Observable< Array<countryStatsRow> > {
+        return this.http.get<countryWiseStats>(url.countryWiseCasesCountUrl)
+        .pipe(map(res => {
+            return res.data.rows;
+        }));
+    }
+
+    getCountryRecord(name: string): Observable<countryStatsRow> {
+        let params = new HttpParams().set("search", name);
+        return this.http.get<countryWiseStats>(url.countryWiseCasesCountUrl, {
+            params: params
+        }).pipe(map(res => {
+            return res.data.rows[0];
+        }));
     }
 
     getMapData() {
