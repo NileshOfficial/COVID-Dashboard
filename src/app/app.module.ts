@@ -19,6 +19,7 @@ import { TweetsComponent } from './home/tweets/tweets.component';
 import { AccordianComponent } from './accordian/accordian.component';
 import { HelpLineComponent } from './help-line/help-line.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -34,8 +35,9 @@ import { NotfoundComponent } from './notfound/notfound.component';
     TweetsComponent,
     AccordianComponent,
     HelpLineComponent,
-    NumberFormatPipe,
-    NotfoundComponent
+    NotfoundComponent,
+    LoadingComponent,
+    NumberFormatPipe
   ],
   imports: [
     BrowserModule,
