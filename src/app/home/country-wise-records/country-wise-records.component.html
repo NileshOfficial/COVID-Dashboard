@@ -1,13 +1,16 @@
 <div class="card">
-    <div>
+    <div class="header">
         <span class="search">
             <fa-icon [icon]="search"></fa-icon>
-            <input (keyup.enter)="searchInput($event)" type="text" placeholder="Search Location">
+            <input (keyup.enter)="onInput($event)" type="text" placeholder="Search Location">
+            <covid-loading *ngIf="searchingRecord" [height]="18" [width]="18"></covid-loading>
         </span>
-        <span class="message"></span>
+        <span *ngIf="searchMessage !== ''" class="message">{{searchMessage}}</span>
     </div>
     <div class="listView">
         <ul class="countryData">
+            <covid-loading class="absoluteCenter" *ngIf="fetchingCountriesStats"></covid-loading>
+            <span class="message absoluteCenter centerText">{{statsListMessage}}</span>
             <li class="card" *ngIf="searchedRecord.country">
                 <div class="countryStats">
                     <span>

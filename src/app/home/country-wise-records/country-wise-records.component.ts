@@ -10,7 +10,8 @@ import { faCaretDown, faCaretUp, faSearch, IconDefinition } from '@fortawesome/f
 })
 export class CountryWiseRecordsComponent implements OnInit, OnDestroy {
 
-  private handle: /* justify-content: space-between; */any;
+  private handle: any;
+  private currentSearchQuery: string = '';
 
   countryStats: Array<countryStatsRow> = [];
   searchedRecord: countryStatsRow = {};
@@ -18,29 +19,72 @@ export class CountryWiseRecordsComponent implements OnInit, OnDestroy {
   rise: IconDefinition = faCaretUp;
   decline: IconDefinition = faCaretDown;
 
-  constructor(private http: HttpService) {}
+  searchingRecord: boolean = false;
+  fetchingCountriesStats: boolean = false;
+  searchMessage: string = '';
+  statsListMessage: string = '';
+
+
+  constructor(private http: HttpService) { }
 
   ngOnInit(): void {
     this.getCountryStats();
-    this.handle = setInterval(this.getCountryStats.bind(this), 10000);
   }
 
-  searchInput(event: any): void {
-    if(event.target.value === '') {
-      this.searchedRecord = {};
+  onInput(event: any): void {
+    if (event.target.value === '') {
+      this.resetSearch();
     } else {
-      this.searchedRecord = {};
-      this.http.getCountryRecord(event.target.value).subscribe(data => {
-        this.searchedRecord = data;
-      });
+      this.resetSearch(true);
+      this.currentSearchQuery = event.target.value.toLowerCase();
+      this.searchCountry();
     }
   }
-  
-  getCountryStats():void {
-    console.log("launched");
-    this.http.getCountryWiseCasesCount().subscribe(data => {
-      this.countryStats = data;
-    });
+
+  private searchCountry() {
+    this.http.getCountryRecord(this.currentSearchQuery)
+      .subscribe(this.updateSearchRecord.bind(this), this.handleSearchErrResponse.bind(this));
+  }
+
+  private updateSearchRecord(data): void {
+    this.searchingRecord = false;
+    if (data)
+      this.searchedRecord = data;
+    else
+      this.searchMessage = "No such country";
+  }
+
+  private handleSearchErrResponse(err: ErrorEvent): void {
+    this.searchMessage = "Error Occurred, Try Again Later";
+    this.searchingRecord = false;
+  }
+
+  private resetSearch(searchingRecord: boolean = false): void {
+    this.searchedRecord = {};
+    this.currentSearchQuery = '';
+    this.searchingRecord = searchingRecord;
+    this.searchMessage = '';
+  }
+
+  private getCountryStats(): void {
+    if (this.countryStats.length === 0)
+      this.fetchingCountriesStats = true;
+    this.http.getCountryWiseCasesCount()
+      .subscribe(this.updateCountriesList.bind(this), this.handleListFetchError.bind(this));
+  }
+
+  private updateCountriesList(data): void {
+    this.fetchingCountriesStats = false;
+    this.countryStats = data;
+    this.handle = setInterval(this.getCountryStats.bind(this), 100000);
+  }
+
+  private handleListFetchError(err: ErrorEvent): void {
+    this.fetchingCountriesStats = false;
+    if (this.countryStats.length === 0) {
+      this.statsListMessage = "Error Occurred, Try Refreshing Page";
+      clearInterval(this.handle);
+    }
   }
 
   getNumber(str: string): number {
