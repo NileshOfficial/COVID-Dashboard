@@ -22,11 +22,9 @@ export class CaseCountComponent implements OnInit, OnChanges {
   ngOnChanges(change: SimpleChanges): void {
     if (this.invertTrend) {
       this.indicatorConfig = this.rise ? ["#00C566", faCaretUp] : ["#FF0019", faCaretDown];
-      console.log("inverted", this.indicatorConfig);
     }
     else {
       this.indicatorConfig = this.rise ? ["#FF0019", faCaretUp] : ["#00C566", faCaretDown];
-      console.log("notInverted", this.indicatorConfig);
     }
   }
 
