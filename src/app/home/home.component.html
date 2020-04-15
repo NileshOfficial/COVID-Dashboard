@@ -17,7 +17,7 @@
     </div>
     <div class="col-md-3">
         <div class="row">
-            <covid-recovery-tracker class="col-md-12 mb-5" [affectedCount]="globalCaseCount.cases" [recoveredCount]="globalCaseCount.recovered">
+            <covid-recovery-tracker class="col-md-12 mb-5" [loadingData]="loadingGlobalStats" [errMessage]="globalStatsMessage" [affectedCount]="globalCaseCount.cases" [recoveredCount]="globalCaseCount.recovered">
             </covid-recovery-tracker>
             <covid-tweets class="col-md-12 mb-5"></covid-tweets>
         </div>

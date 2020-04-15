@@ -1,11 +1,13 @@
 <div class="card">
     <h3>Ratio of Recovery</h3>
     <div class="pie">
-        <span class="percentage">{{
-            percentage ? ((percentage | numberFormat:"setPrecision":2) + "%") : "..."
+        <span *ngIf="!loadingData && !errMessage" class="percentage absoluteCenter">{{
+            ((percentage | numberFormat:"setPrecision":2) + "%")
         }}
         </span>
+        <covid-loading class="absoluteCenter" *ngIf="loadingData && !errMessage" [height]="50" [width]="50"></covid-loading>
+        <span *ngIf="errMessage" class="message absoluteCenter">{{errMessage}}</span>
     </div>
-    <span class="count affectedCount">{{ affectedCount ? ((affectedCount | numberFormat:"k") + " Affected") : '...' }}</span>
-    <span class="count recoveredCount">{{ recoveredCount ? ((recoveredCount | numberFormat:"k") + " Recovered") : '...' }}</span>
+    <span *ngIf="!loadingData && !errMessage" class="count affectedCount">{{ ((affectedCount | numberFormat:"k") + " Affected") }}</span>
+    <span *ngIf="!loadingData && !errMessage" class="count recoveredCount">{{ ((recoveredCount | numberFormat:"k") + " Recovered") }}</span>
 </div>

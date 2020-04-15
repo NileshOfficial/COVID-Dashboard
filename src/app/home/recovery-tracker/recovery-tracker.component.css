@@ -19,10 +19,6 @@
 }
 
 .card > .pie .percentage {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: inline-block;
     height: 100px;
     width: 100px;
@@ -49,4 +45,21 @@
 
 .card .recoveredCount {
     padding-left: 1rem;
+}
+
+.message {
+    display: inline-block;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #FF0019;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.absoluteCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

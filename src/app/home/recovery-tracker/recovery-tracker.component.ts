@@ -9,7 +9,10 @@ export class RecoveryTrackerComponent implements OnInit, OnChanges {
 
   @Input() affectedCount: number;
   @Input() recoveredCount: number;
+  @Input() loadingData: boolean;
+  @Input() errMessage: string = '';
   percentage: number;
+  
   constructor() { }
 
   ngOnInit(): void {
