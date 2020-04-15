@@ -1,13 +1,13 @@
 <div class="row px-4 py-5">
     <div class="col-md-9">
         <div class="row">
-            <covid-case-count class="col-md-3 mb-5" heading="Total Cases" [count]="globalCaseCount.cases" [rise]="trend[0]">
+            <covid-case-count class="col-md-3 mb-5" heading="Total Cases" [count]="globalCaseCount.cases" [rise]="trend[0]" [loadingData]="loadingGlobalStats" [errMessage]="globalStatsMessage">
             </covid-case-count>
-            <covid-case-count class="col-md-3 mb-5" heading="Recovered" [count]="globalCaseCount.recovered" [rise]="trend[1]" [invertTrend]="true">
+            <covid-case-count class="col-md-3 mb-5" heading="Recovered" [count]="globalCaseCount.recovered" [rise]="trend[1]" [invertTrend]="true" [loadingData]="loadingGlobalStats" [errMessage]="globalStatsMessage">
             </covid-case-count>
-            <covid-case-count class="col-md-3 mb-5" heading="Active Cases" [count]="globalCaseCount.active" [rise]="trend[2]">
+            <covid-case-count class="col-md-3 mb-5" heading="Active Cases" [count]="globalCaseCount.active" [rise]="trend[2]" [loadingData]="loadingGlobalStats" [errMessage]="globalStatsMessage">
             </covid-case-count>
-            <covid-case-count class="col-md-3 mb-5" heading="Total Death" [count]="globalCaseCount.deaths" [rise]="trend[3]">
+            <covid-case-count class="col-md-3 mb-5" heading="Total Death" [count]="globalCaseCount.deaths" [rise]="trend[3]" [loadingData]="loadingGlobalStats" [errMessage]="globalStatsMessage">
             </covid-case-count>
             <covid-country-wise-records class="col-md-5 mb-5"></covid-country-wise-records>
             <covid-world-map class="col-md-7 mb-5"></covid-world-map>

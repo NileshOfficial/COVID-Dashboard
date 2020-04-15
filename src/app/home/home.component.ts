@@ -9,34 +9,54 @@ import { globalCasesData } from '../services/response.model';
 })
 export class HomeComponent implements OnInit, OnDestroy {
 
-  private intervalHandles: Array<any> = [];
-  
+  private intervalHandle: any;
+
   globalCaseCount: globalCasesData = {};
   trend: Array<boolean> = new Array(4);
+  loadingGlobalStats: boolean = true;
+  globalStatsMessage: string = '';
 
   constructor(private http: HttpService) { }
 
   ngOnInit(): void {
-    this.intervalHandles.push(setInterval(this.refreshData.bind(this), 5000));
+    this.fetchGlobalStats();
+    this.intervalHandle = setInterval(this.refreshData.bind(this), 5000);
   }
 
   refreshData(): void {
-    this.http.getGlobalCasesCount().subscribe(data => {
-      if(this.globalCaseCount) {
-        this.trend[0] = data.cases - this.globalCaseCount.cases >= 0 ? true : false;
-        this.trend[1] = data.recovered - this.globalCaseCount.recovered >= 0 ? true : false;
-        this.trend[2] = data.active - this.globalCaseCount.active >= 0 ? true : false;
-        this.trend[3] = data.deaths - this.globalCaseCount.deaths >= 0 ? true : false;
-      }
+    if (!this.globalCaseCount.cases) {
+      this.loadingGlobalStats = true;
+    }
+    this.fetchGlobalStats();
+  }
 
-      this.globalCaseCount = data;
-    });
+  fetchGlobalStats() {
+    this.http.getGlobalCasesCount()
+      .subscribe(this.updateGlobalCasesData.bind(this), this.handleGlobalStatsFetchError.bind(this));
+  }
+
+  updateGlobalCasesData(data): void {
+    if (this.globalCaseCount) {
+      this.trend[0] = data.cases - this.globalCaseCount.cases >= 0 ? true : false;
+      this.trend[1] = data.recovered - this.globalCaseCount.recovered >= 0 ? true : false;
+      this.trend[2] = data.active - this.globalCaseCount.active >= 0 ? true : false;
+      this.trend[3] = data.deaths - this.globalCaseCount.deaths >= 0 ? true : false;
+    }
+
+    this.globalCaseCount = data;
+    this.loadingGlobalStats = false;
+  }
+
+  handleGlobalStatsFetchError(err: ErrorEvent): void {
+    if (!this.globalCaseCount.cases) {
+      this.globalStatsMessage = "error occurred, try refreshing page";
+      this.loadingGlobalStats = false;
+    }
+    clearInterval(this.intervalHandle);
   }
 
   ngOnDestroy(): void {
-    this.intervalHandles.forEach(handle => { 
-      clearInterval(handle) 
-    });
+    clearInterval(this.intervalHandle);
   }
 
 }

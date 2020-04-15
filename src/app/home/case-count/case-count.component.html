@@ -1,11 +1,13 @@
-<div class="card">
-    <div class="count">
+<div class="card" [ngClass]="{'centeredContent': loadingData === true || errMessage }">
+    <div class="count" *ngIf="loadingData === false && !errMessage">
         <span> 
             {{countType}} 
             <fa-icon *ngIf="count" [ngStyle]="{color: indicatorConfig[0]}" [icon]="indicatorConfig[1]">
             </fa-icon>
         </span>
-        <h3>{{ count ? (count | numberFormat) : '...'}}</h3>
+        <h3>{{ count | numberFormat }}</h3>
     </div>
-    <img class="trend" src="../../../assets/images/Graph-2.svg">
+    <img *ngIf="loadingData === false && !errMessage" class="trend" src="../../../assets/images/Graph-2.svg">
+    <covid-loading *ngIf="loadingData && errMessage === ''" [height]="50" [width]="50"></covid-loading>
+    <span *ngIf="errMessage" class="message">{{errMessage}}</span>
 </div>

@@ -12,11 +12,15 @@ export class CaseCountComponent implements OnInit, OnChanges {
   @Input() count: number = 0;
   @Input() rise: boolean = true;
   @Input() invertTrend: boolean = false;
+  @Input() loadingData: boolean = false;
+  @Input() errMessage: string = '';
+
   indicatorConfig: Array<any>;
 
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
   ngOnChanges(change: SimpleChanges): void {
