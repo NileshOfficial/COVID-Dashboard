@@ -1,28 +1,39 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'covid-line-chart',
   templateUrl: './line-chart.component.html',
   styleUrls: ['./line-chart.component.css']
 })
-export class LineChartComponent implements OnInit {
+export class LineChartComponent implements OnInit, OnChanges {
 
-  @Input() chartData: Array<Array<any>>;
+  @Input() chartData: Array<Array<any>> = [];
+  @Input() lineColor: string;
 
-  public chart = {
-    title: 'Styled Line Chart',
+  chart = {
     type: "Line",
     columns: [
-      'Date',
-      'Count'
+      '',
+      ''
     ],
+    options: {
+      axes: {
+        y: {
+          0: { side: 'right' },
+        }
+      },
+      legend: {
+        position: 'none'
+      },
+      colors: ['#1a73e8']
+    }
   }
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
-  onReady() {
+  ngOnChanges(change: SimpleChanges): void {
+    this.chart.options.colors = [this.lineColor];
   }
 }

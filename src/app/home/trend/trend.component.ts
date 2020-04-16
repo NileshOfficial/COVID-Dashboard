@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../../services/http.service'
 
 @Component({
   selector: 'covid-trend',
@@ -6,8 +7,48 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./trend.component.css']
 })
 export class TrendComponent implements OnInit {
-constructor() { }
+  trendData: { cases: Array<any>, deaths: Array<any>, recovered: Array<any> } = {cases: [], deaths: [], recovered: []}
+  currentTrend: string = 'cases';
+  trendColor: string = '#1a73e8' //  #ff0019 #00C566
 
-  ngOnInit() {
+  trendDataAvailable: boolean = false;
+
+  constructor(private http: HttpService) { }
+
+  ngOnInit(): void {
+    this.http.getTimeSeriesData().subscribe(data => {
+      this.trendData = data;
+      this.trendDataAvailable = true;
+    });
+  }
+
+  changeTrend(trend: string, color: string): void {
+    this.currentTrend = trend;
+    this.trendColor = color;
+  }
+
+  getCurrentTrend(): Array<any> {
+    return this.trendData[this.currentTrend];
+  }
+
+  getTrendName(): string {
+    switch (this.currentTrend) {
+      case 'cases': return 'confirmed';
+      case 'recovered': return 'recovered';
+      case 'deaths': return 'deceased';
+    }
+  }
+
+  getTrendDate(): string {
+    const date: string = this.trendData[this.currentTrend][0][0];
+    return date.split(',')[0];
+  }
+
+  getTrendCount(): number {
+    return this.trendData[this.currentTrend][0][1];
+  }
+  getTrendDelta(): number {
+    const trend = this.trendData[this.currentTrend]
+    return trend[1][1] - trend[0][1];
   }
 }

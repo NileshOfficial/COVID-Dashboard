@@ -63,9 +63,18 @@ export class HttpService {
 
                 let cases = [], deaths = [], recovered = [];
 
-                cases = Object.keys(response.cases).map(entry => [entry[0], entry[1]]);
-                recovered = Object.keys(response.recovered).map(entry => [entry[0], entry[1]]);
-                deaths = Object.keys(response.deaths).map(entry => [entry[0], entry[1]]);
+                
+                cases = Object.keys(response.cases).map(entry => 
+                    [this.reformatDate(entry), response.cases[entry]]
+                );
+
+                recovered = Object.keys(response.recovered).map(entry => 
+                    [this.reformatDate(entry), response.recovered[entry]]
+                );
+                
+                deaths = Object.keys(response.deaths).map(entry => 
+                    [this.reformatDate(entry), response.deaths[entry]]
+                );
 
                 timeseriesData.cases = cases;
                 timeseriesData.recovered = recovered;
@@ -73,5 +82,11 @@ export class HttpService {
 
                 return timeseriesData;
             }));
+    }
+
+    private reformatDate(date: string) {
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        const datePieces = date.split('/');
+        return [ months[Number(datePieces[0]) - 1] + ' ' + datePieces[1], ' ' + datePieces[2]].join();
     }
 }
