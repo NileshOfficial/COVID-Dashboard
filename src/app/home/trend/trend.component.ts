@@ -40,15 +40,17 @@ export class TrendComponent implements OnInit {
   }
 
   getTrendDate(): string {
-    const date: string = this.trendData[this.currentTrend][0][0];
+    const trend = this.trendData[this.currentTrend]
+    const date: string = trend[trend.length -1][0];
     return date.split(',')[0];
   }
 
   getTrendCount(): number {
-    return this.trendData[this.currentTrend][0][1];
+    const trend = this.trendData[this.currentTrend]
+    return trend[trend.length - 1][1];
   }
   getTrendDelta(): number {
     const trend = this.trendData[this.currentTrend]
-    return trend[1][1] - trend[0][1];
+    return trend[trend.length - 1][1] - trend[trend.length - 2][1];
   }
 }
