@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
-import { ChartsModule } from 'ng2-charts';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -43,7 +42,6 @@ import { LoadingComponent } from './loading/loading.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    ChartsModule,
     FontAwesomeModule
   ],
   providers: [],
