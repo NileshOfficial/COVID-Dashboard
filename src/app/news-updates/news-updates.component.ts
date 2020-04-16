@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../services/http.service';
+import { newsData }  from '../services/response.model';
+import { faCircle, faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'covid-news-updates',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsUpdatesComponent implements OnInit {
 
-  constructor() { }
+  newsData: newsData = null;
+  separatorIcon=faCircle;
+  globeIcon=faGlobeAmericas;
+
+  constructor(private http: HttpService) { }
 
   ngOnInit(): void {
+    this.http.getNews().subscribe(data => {
+      this.newsData = data;
+    })
   }
 
+  getArticles() {
+    return this.newsData.articles;
+  }
 }
