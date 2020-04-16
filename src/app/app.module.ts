@@ -20,6 +20,7 @@ import { AccordianComponent } from './accordian/accordian.component';
 import { HelpLineComponent } from './help-line/help-line.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { LoadingComponent } from './loading/loading.component';
+import { LineChartComponent } from './line-chart/line-chart.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { LoadingComponent } from './loading/loading.component';
     HelpLineComponent,
     NotfoundComponent,
     LoadingComponent,
+    LineChartComponent,
     NumberFormatPipe
   ],
   imports: [
