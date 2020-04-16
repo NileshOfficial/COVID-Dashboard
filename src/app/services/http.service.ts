@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
-import { url } from './http.config';
-import { globalCasesData, countryWiseStats, countryStatsRow } from './response.model';
+import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
+import { url, apiKeys } from './http.config';
+import { globalCasesData, countryWiseStats, countryStatsRow, newsData } from './response.model';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
@@ -36,6 +36,12 @@ export class HttpService {
         }).pipe(map(res => {
             return res.data.rows[0];
         }));
+    }
+
+    getNews(): Observable<newsData> {
+        return this.http.get<newsData>(url.newsUrl, {
+            headers: new HttpHeaders().set('x-api-key', apiKeys.newsApiKey
+        )});
     }
 
     getMapData() {
