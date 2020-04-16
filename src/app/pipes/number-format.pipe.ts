@@ -14,7 +14,13 @@ export class NumberFormatPipe implements PipeTransform {
   }
 
   csv(num: number): string {
-    if (num <= 999) return '' + num;
+    if (num >= -999 && num <= 999) return '' + num;
+
+    let sign = ''; 
+    if(num < 0) {
+      sign = '-'; 
+      num *= -1;
+    }
 
     let digits: Array<string> = ('' + num).split('');
 
@@ -24,12 +30,11 @@ export class NumberFormatPipe implements PipeTransform {
     for (; i <= digits.length - 3; i += 4)
       digits.splice(i, 0, ',');
 
-    return digits.join('');
+    return sign + digits.join('');
   }
 
   k(num: number): string {
-    if(num < 1000)
-      return "" + num;
+    if(num > -1000 && num < 1000) return "" + num;
     let kCount =  Math.round(num / 1000);
     return this.csv(kCount) + 'k';
   }
