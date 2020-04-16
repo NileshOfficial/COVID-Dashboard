@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { url } from './http.config';
-import { globalCasesData, countryWiseStats, countryStatsRow } from './response.model';
+import { globalCasesData, countryWiseStats, countryStatsRow, timeseries } from './response.model';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
@@ -52,5 +52,26 @@ export class HttpService {
             });
             return mappedData;
         }));
+    }
+
+    getTimeSeriesData(): Observable<{cases: Array<any>, deaths: Array<any>, recovered: Array<any>}> {
+        return this.http.get<timeseries>(url.timeseriesUrl)
+            .pipe(map(response => {
+                const timeseriesData = {
+                    cases: null, deaths: null, recovered: null
+                };
+
+                let cases = [], deaths = [], recovered = [];
+
+                cases = Object.keys(response.cases).map(entry => [entry[0], entry[1]]);
+                recovered = Object.keys(response.recovered).map(entry => [entry[0], entry[1]]);
+                deaths = Object.keys(response.deaths).map(entry => [entry[0], entry[1]]);
+
+                timeseriesData.cases = cases;
+                timeseriesData.recovered = recovered;
+                timeseriesData.deaths = deaths;
+
+                return timeseriesData;
+            }));
     }
 }

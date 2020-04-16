@@ -43,3 +43,9 @@ export interface countryWiseStats {
     },
     status: string;
 }
+
+export interface timeseries{
+    cases: {[key: string]: number},
+    deaths: {[key: string]: number},
+    recovered: {[key: string]: number}
+}
