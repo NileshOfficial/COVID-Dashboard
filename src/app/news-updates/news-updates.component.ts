@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpService } from '../services/http.service';
 import { newsData }  from '../services/response.model';
 import { faCircle, faGlobeAmericas, IconDefinition, faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -8,7 +8,9 @@ import { faCircle, faGlobeAmericas, IconDefinition, faArrowRight } from '@fortaw
   templateUrl: './news-updates.component.html',
   styleUrls: ['./news-updates.component.css']
 })
-export class NewsUpdatesComponent implements OnInit {
+export class NewsUpdatesComponent implements OnInit, OnDestroy {
+
+  private handle: any;
 
   newsData: newsData = null;
   separatorIcon: IconDefinition = faCircle;
@@ -20,6 +22,7 @@ export class NewsUpdatesComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchArticles();
+    this.handle = setInterval(this.fetchArticles.bind(this), 100000);
   }
 
   fetchArticles() {
@@ -27,16 +30,22 @@ export class NewsUpdatesComponent implements OnInit {
   }
 
   updateArticles(data) {
+    console.log(data);
     this.newsData = data;
   }
 
   errHandler(err: ErrorEvent) {
     console.log(err);
     if(!this.newsData)
-      this.errMessage = "error occurred, try refreshing the page."
+      this.errMessage = "error occurred, try refreshing the page.";
+    clearInterval(this.handle);
   }
 
   getArticles() {
     return this.newsData.articles;
+  }
+
+  ngOnDestroy() {
+    clearInterval(this.handle);
   }
 }
