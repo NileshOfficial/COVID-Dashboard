@@ -41,7 +41,15 @@
 
 .map {
     position: relative;
-    border: 1px solid #aaa;
+    width: 100%;
+    height: 100%;
+}
+
+.absoluteCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .map img {
@@ -83,4 +91,14 @@
 .map .navigate img {
     height: 100%;
     width: 100%;
+}
+
+.message {
+    display: inline-block;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #FF0019;
+    text-align: center;
+    text-transform: capitalize;
 }

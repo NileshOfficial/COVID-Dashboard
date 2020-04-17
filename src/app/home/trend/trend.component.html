@@ -2,19 +2,24 @@
     <div class="header">
         <h3>Spread Trends</h3>
         <span class="btnGroup" activeChildEmphasis>
-            <a [activeEmphasis]="'active'">Confirmed</a>
-            <a [activeEmphasis]="'active'">Recovered</a>
-            <a [activeEmphasis]="'active'">Deceased</a>
+            <a (click)="changeTrend('cases', '#1A73e8')" class="active" [activeEmphasis]="'active'">Confirmed</a>
+            <a (click)="changeTrend('recovered', '#00C566')" [activeEmphasis]="'active'">Recovered</a>
+            <a (click)="changeTrend('deaths', '#FF0019')" [activeEmphasis]="'active'">Deceased</a>
         </span>
     </div>
-    <div class="trend">
-        <span class="stats">
-            <span class="trendType">Confirmed</span>
-            <span class="date">01 April</span>
+    <div class="trend" [ngClass]="{maxHeight: (!trendDataAvailable || errMessage)}">
+        <covid-loading class="absoluteCenter" *ngIf="!trendDataAvailable && !errMessage" [height]="50" [width]="50"></covid-loading>
+        <span *ngIf="errMessage" class="absoluteCenter message">{{errMessage}}</span>
+        <covid-line-chart *ngIf="trendDataAvailable && !errMessage" [chartData]="getCurrentTrend()" [lineColor]="trendColor"></covid-line-chart>
+        <span *ngIf="trendDataAvailable" class="stats" [ngStyle]="{color: trendColor}">
+            <span class="trendType">{{ getTrendName() }}</span>
+            <br>
+            <span class="date">{{ getTrendDate() }}</span>
+            <br>
             <span class="count">
-                {{878500 | numberFormat:'k'}}
+                {{ getTrendCount() | numberFormat:'k'}}
                 <span class="change">
-                    +{{136900 | numberFormat:'k'}}
+                    {{ getTrendDelta() >= 0 ? '+' : ''}}{{ getTrendDelta() | numberFormat:'k'}}
                 </span>
             </span>
         </span>

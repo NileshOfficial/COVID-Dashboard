@@ -60,3 +60,9 @@ export interface newsData {
     totalResults: number,
     articles: Array<newsArticle>
 }
+
+export interface timeseries{
+    cases: {[key: string]: number},
+    deaths: {[key: string]: number},
+    recovered: {[key: string]: number}
+}

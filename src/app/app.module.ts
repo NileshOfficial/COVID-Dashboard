@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
+import { GoogleChartsModule } from 'angular-google-charts';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -21,6 +23,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { LoadingComponent } from './loading/loading.component';
 import { NewsUpdatesComponent } from './news-updates/news-updates.component';
 import { YoutubeComponent } from './youtube/youtube.component';
+import { LineChartComponent } from './line-chart/line-chart.component';
 
 @NgModule({
   declarations: [
@@ -40,13 +43,22 @@ import { YoutubeComponent } from './youtube/youtube.component';
     LoadingComponent,
     NewsUpdatesComponent,
     YoutubeComponent,
+    LineChartComponent,
     NumberFormatPipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    GoogleChartsModule.forRoot('AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'),
+    NgCircleProgressModule.forRoot({
+      "radius": 60,
+      "outerStrokeWidth": 10,
+      "innerStrokeWidth": 5,
+      "showBackground": false,
+      "startFromZero": false
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

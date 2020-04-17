@@ -13,12 +13,15 @@
         </span>
     </div>
     <div class="map">
-        <img src="../../../assets/images/worldMap.png" alt="map">
-        <button class="search">
-            <img src="../../../assets/images/search.svg" alt="search">
-        </button>
-        <span class="navigate">
-            <img src="../../../assets/images/Naviaget.svg" alt="navigate">
-        </span>
+        <google-chart
+            [title]="chartConfig.title"
+            [type]="chartConfig.type"
+            [data]="chartConfig.data"
+            [columnNames]="chartConfig.columns"
+            [options]="chartConfig.options"
+            (ready)="chartReady()"
+        ></google-chart>
+        <covid-loading class="absoluteCenter" [height]="50" [width]=50 *ngIf="loadingData && !errMessage"></covid-loading>
+        <span class="absoluteCenter message" *ngIf="errMessage">{{errMessage}}</span>
     </div>
 </div>
