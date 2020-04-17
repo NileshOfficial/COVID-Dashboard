@@ -29,9 +29,8 @@ export class TrendComponent implements OnInit, OnDestroy {
   }
 
   updateTrendData(data): void {
-    console.log(data);
     this.trendData = data;
-      this.trendDataAvailable = true;
+    this.trendDataAvailable = true;
   }
 
   handleError(err: ErrorEvent): void {
