@@ -20,6 +20,7 @@ import { HelpLineComponent } from './help-line/help-line.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { LoadingComponent } from './loading/loading.component';
 import { NewsUpdatesComponent } from './news-updates/news-updates.component';
+import { YoutubeComponent } from './youtube/youtube.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { NewsUpdatesComponent } from './news-updates/news-updates.component';
     NotfoundComponent,
     LoadingComponent,
     NewsUpdatesComponent,
+    YoutubeComponent,
     NumberFormatPipe
   ],
   imports: [
