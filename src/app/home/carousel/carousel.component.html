@@ -5,9 +5,9 @@
                 <img src="../../../assets/images/Illustration.svg" alt="" class="icon">
             </span>
             <div class="content">
-                <a class="moreContent redText redBg">news &amp; updates</a>
-                <span class="description">5 Symptoms of Corona Virus that you should know</span>
-                <a class="externalLink redText redArrow">read more</a>
+                <a class="moreContent redText redBg" [routerLink]="['/NewsAndUpdates']" >news &amp; updates</a>
+                <span class="description">Get hold of What is Trending on COVID-19 worldwide</span>
+                <a class="externalLink redText redArrow" [routerLink]="['/NewsAndUpdates']">read more</a>
             </div>
         </div>
         <div *ngIf="currentCarouselBanner === 1" class="banner">
@@ -15,9 +15,9 @@
                 <img src="../../../assets/images/Illustration.svg" alt="" class="icon">
             </span>
             <div class="content">
-                <a class="moreContent greenText greenBg">donate</a>
+                <a class="moreContent greenText greenBg" [routerLink]="['/HelpLinks']" [fragment]="'donate'">donate</a>
                 <span class="description">Donate 3rd world countries which are suffering</span>
-                <a class="externalLink greenText greenArrow">donate now</a>
+                <a class="externalLink greenText greenArrow" [routerLink]="['/HelpLinks']" [fragment]="'donate'">donate now</a>
             </div>
         </div>
         <div *ngIf="currentCarouselBanner === 2" class="banner">
