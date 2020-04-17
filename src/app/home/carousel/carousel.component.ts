@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { faNewspaper, faHandHoldingUsd, faInfoCircle, faArrowRight, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'covid-carousel',
@@ -9,6 +10,11 @@ export class CarouselComponent implements OnInit, OnDestroy {
 
   currentCarouselBanner = 0;
   private intervalHandle: any;
+
+  newsIcon: IconDefinition = faNewspaper;
+  donateIcon: IconDefinition = faHandHoldingUsd;
+  infoIcon: IconDefinition = faInfoCircle;
+  arrow: IconDefinition = faArrowRight;
 
   constructor() { }
 

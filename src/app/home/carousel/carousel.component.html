@@ -1,33 +1,40 @@
 <div class="card" (mouseenter)="stopRotation()" (mouseleave)="startRotation()">
     <div class="carouselItems">
         <div *ngIf="currentCarouselBanner === 0" class="banner">
-            <span class="img">
-                <img src="../../../assets/images/Illustration.svg" alt="" class="icon">
-            </span>
+            <fa-icon class="icon redText" [icon]="newsIcon"></fa-icon>
             <div class="content">
-                <a class="moreContent redText redBg" [routerLink]="['/NewsAndUpdates']" >news &amp; updates</a>
-                <span class="description">Get hold of What is Trending on COVID-19 worldwide</span>
-                <a class="externalLink redText redArrow" [routerLink]="['/NewsAndUpdates']">read more</a>
+                <a class="moreContent redText redBg" [routerLink]="['/NewsAndUpdates']">news &amp; updates</a>
+                <span class="description">Trending Content on COVID-19 Worldwide</span>
+                <a class="externalLink redText" [routerLink]="['/NewsAndUpdates']">
+                    read more
+                    <fa-icon class="arrow" [icon]="arrow"></fa-icon>
+                </a>
             </div>
         </div>
         <div *ngIf="currentCarouselBanner === 1" class="banner">
-            <span class="img">
-                <img src="../../../assets/images/Illustration.svg" alt="" class="icon">
-            </span>
+
+            <fa-icon class="icon greenText" [icon]="donateIcon"></fa-icon>
+
             <div class="content">
                 <a class="moreContent greenText greenBg" [routerLink]="['/HelpLinks']" [fragment]="'donate'">donate</a>
-                <span class="description">Donate 3rd world countries which are suffering</span>
-                <a class="externalLink greenText greenArrow" [routerLink]="['/HelpLinks']" [fragment]="'donate'">donate now</a>
+                <span class="description">Donate to 3rd World Suffering Countries</span>
+                <a class="externalLink greenText greenArrow" [routerLink]="['/HelpLinks']" [fragment]="'donate'">
+                    donate now
+                    <fa-icon class="arrow" [icon]="arrow"></fa-icon>
+                </a>
             </div>
         </div>
         <div *ngIf="currentCarouselBanner === 2" class="banner">
-            <span class="img">
-                <img src="../../../assets/images/Illustration.svg" alt="" class="icon">
-            </span>
+
+            <fa-icon class="icon blueText" [icon]="infoIcon"></fa-icon>
+
             <div class="content">
-                <a class="moreContent redText redBg">news &amp; updates</a>
-                <span class="description">5 Symptoms of Corona Virus that you should know</span>
-                <a class="externalLink redText redArrow">read more</a>
+                <a class="moreContent blueText blueBg" [routerLink]="['/Videos']">More Information</a>
+                <span class="description">COVID-19 Myths and Facts You Should be Aware of</span>
+                <a class="externalLink blueText redArrow" [routerLink]="['/Videos']">
+                    know more
+                    <fa-icon class="arrow" [icon]="arrow"></fa-icon>
+                </a>
             </div>
         </div>
     </div>
