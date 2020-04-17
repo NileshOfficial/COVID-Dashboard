@@ -1,25 +1,34 @@
-<div class="row px-4 py-5">
-    <div class="col-md-9">
-        <div class="row">
-            <covid-case-count class="col-md-3 mb-5" heading="Total Cases" [count]="globalCaseCount.cases" [rise]="trend[0]" [loadingData]="loadingGlobalStats" [errMessage]="globalStatsMessage">
-            </covid-case-count>
-            <covid-case-count class="col-md-3 mb-5" heading="Recovered" [count]="globalCaseCount.recovered" [rise]="trend[1]" [invertTrend]="true" [loadingData]="loadingGlobalStats" [errMessage]="globalStatsMessage">
-            </covid-case-count>
-            <covid-case-count class="col-md-3 mb-5" heading="Active Cases" [count]="globalCaseCount.active" [rise]="trend[2]" [loadingData]="loadingGlobalStats" [errMessage]="globalStatsMessage">
-            </covid-case-count>
-            <covid-case-count class="col-md-3 mb-5" heading="Total Death" [count]="globalCaseCount.deaths" [rise]="trend[3]" [loadingData]="loadingGlobalStats" [errMessage]="globalStatsMessage">
-            </covid-case-count>
-            <covid-country-wise-records class="col-md-5 mb-5"></covid-country-wise-records>
-            <covid-world-map class="col-md-7 mb-5"></covid-world-map>
-            <covid-trend class="col-md-6"></covid-trend>
-            <covid-carousel class="col-md-6"></covid-carousel>
+<div class="container">
+    <div class="row py-4">
+        <div class="col-12 col-sm-12 col-md-8 col-lg-9">
+            <div class="row">
+                <covid-case-count class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-3 mb-4 pr-0" heading="Total Cases" [count]="globalCaseCount.cases"
+                    [rise]="trend[0]" [loadingData]="loadingGlobalStats" [errMessage]="globalStatsMessage">
+                </covid-case-count>
+                <covid-case-count class="col-6 col-sm-6 col-lg-6 col-xl-3 mb-4 pr-0" heading="Recovered" [count]="globalCaseCount.recovered"
+                    [rise]="trend[1]" [invertTrend]="true" [loadingData]="loadingGlobalStats"
+                    [errMessage]="globalStatsMessage">
+                </covid-case-count>
+                <covid-case-count class="col-6 col-sm-6 col-lg-6 col-xl-3 mb-4 pr-0" heading="Active Cases" [count]="globalCaseCount.active"
+                    [rise]="trend[2]" [loadingData]="loadingGlobalStats" [errMessage]="globalStatsMessage">
+                </covid-case-count>
+                <covid-case-count class="col-6 col-sm-6 col-lg-6 col-xl-3 mb-4 pr-0" heading="Total Death" [count]="globalCaseCount.deaths"
+                    [rise]="trend[3]" [loadingData]="loadingGlobalStats" [errMessage]="globalStatsMessage">
+                </covid-case-count>
+                <covid-country-wise-records class="col-sm-6 col-md-12 mb-4 pr-0"></covid-country-wise-records>
+                <covid-world-map class="col-sm-6 col-md-12 mb-4 pr-0"></covid-world-map>
+                <covid-trend class="col-sm-6 col-md-12 mb-4 pr-0"></covid-trend>
+                <covid-carousel class="col-sm-6 col-md-12 mb-4 pr-0"></covid-carousel>
+            </div>
         </div>
-    </div>
-    <div class="col-md-3">
-        <div class="row">
-            <covid-recovery-tracker class="col-md-12 mb-5" [loadingData]="loadingGlobalStats" [errMessage]="globalStatsMessage" [affectedCount]="globalCaseCount.cases" [recoveredCount]="globalCaseCount.recovered">
-            </covid-recovery-tracker>
-            <covid-tweets class="col-md-12 mb-5"></covid-tweets>
+        <div class="col-12 col-sm-12 col-md-4 col-lg-3">
+            <div class="row">
+                <covid-recovery-tracker class="col-sm-6 col-md-12 col-lg-12 mb-4" [loadingData]="loadingGlobalStats"
+                    [errMessage]="globalStatsMessage" [affectedCount]="globalCaseCount.cases"
+                    [recoveredCount]="globalCaseCount.recovered">
+                </covid-recovery-tracker>
+                <covid-tweets class="col-sm-6 col-md-12 col-lg-12 mb-4"></covid-tweets>
+            </div>
         </div>
     </div>
 </div>
