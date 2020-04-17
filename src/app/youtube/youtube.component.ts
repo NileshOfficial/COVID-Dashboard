@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faYoutube, IconDefinition } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'covid-youtube',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class YoutubeComponent implements OnInit {
 
+  youtubeIcon: IconDefinition = faYoutube;
   constructor() { }
 
   ngOnInit(): void {

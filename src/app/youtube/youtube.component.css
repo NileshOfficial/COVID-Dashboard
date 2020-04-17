@@ -1,0 +1,36 @@
+.heading {
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: #30313A;
+    margin-bottom: 1rem;
+}
+
+.heading a {
+    display: inline-flex;
+    align-items: center;
+    transition: ease-in-out 0.2s;
+}
+
+.heading a:hover {
+    color: #FF0019;
+}
+
+.heading a fa-icon {
+    font-size: 3.2rem;
+    margin-right: 1rem;
+}
+
+.video .embed {
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    min-height: 350px;
+}
+
+.video .description {
+    font-size: 1.4rem;
+    color: #30313A;
+    font-weight: 500;
+    margin-top: 1rem;
+}
