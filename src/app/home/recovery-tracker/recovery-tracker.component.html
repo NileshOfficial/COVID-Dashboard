@@ -1,12 +1,26 @@
 <div class="card">
     <h3>Ratio of Recovery</h3>
-    <div class="pie">
-        <span *ngIf="!loadingData && !errMessage" class="percentage absoluteCenter">{{
-            ((percentage | numberFormat:"setPrecision":2) + "%")
-        }}
-        </span>
-        <covid-loading class="absoluteCenter" *ngIf="loadingData && !errMessage" [height]="50" [width]="50"></covid-loading>
-        <span *ngIf="errMessage" class="message absoluteCenter">{{errMessage}}</span>
+    <div class="progressBar">
+        <circle-progress *ngIf="!loadingData && !errMessage"
+            [percent]="percentage"
+            [radius]="100"
+            [outerStrokeWidth]="5"
+            [innerStrokeWidth]="40"
+            [outerStrokeColor]="'#78C000'"
+            [innerStrokeColor]="'#F5F5F5'"
+            [animation]="true"
+            [animationDuration]="500"
+            [showSubtitle]="false"
+            [titleFontSize]="16"
+            [titleFontWeight]="500"
+            [unitsFontSize]="16"
+            [unitsFontWeight]="500"
+            [responsive]="true"
+            [toFixed]="2"
+        ></circle-progress>
+
+        <covid-loading *ngIf="loadingData && !errMessage" [height]="50" [width]="50"></covid-loading>
+        <span *ngIf="errMessage" class="message">{{errMessage}}</span>
     </div>
     <span *ngIf="!loadingData && !errMessage" class="count affectedCount">{{ ((affectedCount | numberFormat:"k") + " Affected") }}</span>
     <span *ngIf="!loadingData && !errMessage" class="count recoveredCount">{{ ((recoveredCount | numberFormat:"k") + " Recovered") }}</span>
