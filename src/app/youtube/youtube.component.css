@@ -34,3 +34,49 @@
     font-weight: 500;
     margin-top: 1rem;
 }
+
+.gutterSpace-l {
+    padding-left: 0.75rem !important;
+}
+
+.gutterSpace-r {
+    padding-right: 0.75rem !important;
+}
+
+.no-gutter>[class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+@media (max-width: 1199px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .gutterSpace-l {
+        padding-left: 0 !important;
+    }
+    
+    .gutterSpace-r {
+        padding-right: 0 !important;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .heading {
+        font-size: 1.8rem;
+    }
+
+    .video .embed {
+        min-height: 300px !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .video .embed {
+        min-height: 200px !important;
+    }
+}
