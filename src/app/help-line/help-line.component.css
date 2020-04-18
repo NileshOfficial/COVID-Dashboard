@@ -8,6 +8,11 @@ ul {
     list-style: none;
     padding-left: 0;
     margin: 0;
+    width: 100%;
+}
+
+#WHOAbbreviation {
+    display: none;
 }
 
 .header {
@@ -20,6 +25,11 @@ ul {
     margin-right: 1rem;
     font-size: 3.2rem;
 }
+
+.contact .tel {
+    display: inline-block;
+}
+
 
 .content {
     margin-top: 1rem;
@@ -67,6 +77,7 @@ ul {
     text-align: center;
     text-decoration: none;
     color: #000;
+    max-width: 200px;
 }
 
 .mainLink:hover {
@@ -108,6 +119,7 @@ ul {
     color: #1A73E8;
     transition: 0.2s ease-in-out;
     outline: none;
+    width: 100%;
 }
 
 .secondaryLink:hover {
@@ -133,4 +145,124 @@ ul {
 
 .green {
     color: #00C566;
+}
+
+.no-gutter>[class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.contact {
+    padding-right: 0.75rem !important;
+}
+.govInfo {
+    padding-right: 0.75rem !important;
+}
+.donate {
+    padding-left: 0.75rem !important;
+}
+
+@media (max-width: 1199px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact {
+        margin-right: 0 !important;
+        padding-right: 0 !important;
+    }
+    .govInfo {
+        padding-right: 0 !important;
+    }
+    .donate {
+        padding-left: 0 !important;
+    }
+    #charitiesAidFoundation {
+        order: 1;
+    }
+    #unitedWay {
+        order: 2;
+    }
+    #publicAdvice {
+        order: 0;
+    }
+    #travelAdvice {
+        order: 1;
+    }
+    #mediaResources {
+        order: 3;
+    }
+    #situationReports {
+        order: 4;
+    }
+    #mythbusters {
+        order: 5;
+    }
+    #countryAndTechnicalGuidance {
+        order: 2;
+    }
+    #yourQuestionsAnswered {
+        order: 6;
+    }
+    #researchAndDevelopment {
+        order: 7;
+    }
+}
+
+@media (max-width: 576px) {
+    #unitedWay {
+        order: 1;
+    }
+    
+    #charitiesAidFoundation,
+    #unitedWay,
+    #publicAdvice,
+    #travelAdvice,
+    #mediaResources,
+    #situationReports,
+    #mythbusters,
+    #countryAndTechnicalGuidance, 
+    #yourQuestionsAnswered,
+    #researchAndDevelopment {
+        order: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .resource {
+        flex-direction: column;
+    }
+
+    .resource .mainLink {
+        margin-top: 1rem;
+    }
+
+    .resource {
+        align-items: flex-start;
+    }
+
+    #WHOAbbreviation {
+        display: inline-flex;
+    }
+
+    #WHO {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    li {
+        width: 100%; 
+    }
+
+    li.mr {
+        margin-right: 0;
+    }
+
+    #WHO {
+        font-size: 1.6rem;
+        text-align: left;
+    }
 }
