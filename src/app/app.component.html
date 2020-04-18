@@ -5,15 +5,23 @@
   </a>
   <nav>
     <ul>
-      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="navlink">
-        <a [routerLink]="['/Dashboard']">home</a>
+      <li title="Home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="navlink">
+        <a [routerLink]="['/Dashboard']">
+          <span>home</span>
+          <fa-icon [icon]="homeIcon"></fa-icon>
+        </a>
       </li>
-      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="navlink">
-        <a [routerLink]="['/FrequentQuestions']">faq</a>
+      <li title="Frequently Asked Questions" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="navlink">
+        <a [routerLink]="['/FrequentQuestions']">
+          <span>faq</span>
+          <fa-icon [icon]="faqIcon"></fa-icon>
+        </a>
       </li>
-      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="navlink">
-        <a [routerLink]="['/HelpLinks']">helpful
-          links</a>
+      <li title="Helpful Links" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="navlink">
+        <a [routerLink]="['/HelpLinks']">
+          <span>helpful links</span>
+          <fa-icon [icon]="helpIcon"></fa-icon>
+        </a>
       </li>
     </ul>
   </nav>
