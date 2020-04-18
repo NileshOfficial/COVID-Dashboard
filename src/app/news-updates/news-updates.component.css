@@ -86,3 +86,29 @@
     text-align: center;
     text-transform: capitalize;
 }
+
+@media (max-width: 1199px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .image {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .header .title {
+        font-size: 1.8rem;
+    }
+
+    .header .meta {
+        font-size: 1rem;
+    }
+
+    .content {
+        font-size: 1.4rem;           
+    }
+}
