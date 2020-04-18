@@ -126,3 +126,19 @@
 .blueText {
     color: #1a73e8;
 }
+
+@media (max-width: 450px) {
+    .card {
+        min-height: 185px;
+    }
+
+    .banner .icon {
+        display: none;
+    }
+}
+
+@media(max-width: 575px) {
+    .card {
+        min-height: 185px;
+    }
+}

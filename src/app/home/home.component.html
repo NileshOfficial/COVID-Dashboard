@@ -1,33 +1,33 @@
 <div class="container">
     <div class="row py-4">
         <div class="col-12 col-sm-12 col-md-8 col-lg-9">
-            <div class="row">
-                <covid-case-count class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-3 mb-4 pr-0" heading="Total Cases" [count]="globalCaseCount.cases"
+            <div class="row no-gutter">
+                <covid-case-count class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 mb-4 rGutter" heading="Total Cases" [count]="globalCaseCount.cases"
                     [rise]="trend[0]" [loadingData]="loadingGlobalStats" [errMessage]="globalStatsMessage">
                 </covid-case-count>
-                <covid-case-count class="col-6 col-sm-6 col-lg-6 col-xl-3 mb-4 pr-0" heading="Recovered" [count]="globalCaseCount.recovered"
+                <covid-case-count class="col-6 col-sm-6 col-lg-3 col-xl-3 mb-4" heading="Recovered" [count]="globalCaseCount.recovered"
                     [rise]="trend[1]" [invertTrend]="true" [loadingData]="loadingGlobalStats"
                     [errMessage]="globalStatsMessage">
                 </covid-case-count>
-                <covid-case-count class="col-6 col-sm-6 col-lg-6 col-xl-3 mb-4 pr-0" heading="Active Cases" [count]="globalCaseCount.active"
+                <covid-case-count class="col-6 col-sm-6 col-lg-3 col-xl-3 mb-4 rGutter" heading="Active Cases" [count]="globalCaseCount.active"
                     [rise]="trend[2]" [loadingData]="loadingGlobalStats" [errMessage]="globalStatsMessage">
                 </covid-case-count>
-                <covid-case-count class="col-6 col-sm-6 col-lg-6 col-xl-3 mb-4 pr-0" heading="Total Death" [count]="globalCaseCount.deaths"
+                <covid-case-count class="col-6 col-sm-6 col-lg-3 col-xl-3 mb-4" heading="Total Death" [count]="globalCaseCount.deaths"
                     [rise]="trend[3]" [loadingData]="loadingGlobalStats" [errMessage]="globalStatsMessage">
                 </covid-case-count>
-                <covid-country-wise-records class="col-sm-6 col-md-12 mb-4 pr-0"></covid-country-wise-records>
-                <covid-world-map class="col-sm-6 col-md-12 mb-4 pr-0"></covid-world-map>
-                <covid-trend class="col-sm-6 col-md-12 mb-4 pr-0"></covid-trend>
-                <covid-carousel class="col-sm-6 col-md-12 mb-4 pr-0"></covid-carousel>
+                <covid-country-wise-records class="col-12 col-sm-6 col-md-12 col-lg-5 col-xl-5 mb-4"></covid-country-wise-records>
+                <covid-world-map class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 mb-4"></covid-world-map>
+                <covid-trend class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-4"></covid-trend>
+                <covid-carousel class="col-0 col-sm-6 col-md-12 col-lg-6 col-xl-6 mb-4"></covid-carousel>
             </div>
         </div>
         <div class="col-12 col-sm-12 col-md-4 col-lg-3">
-            <div class="row">
-                <covid-recovery-tracker class="col-sm-6 col-md-12 col-lg-12 mb-4" [loadingData]="loadingGlobalStats"
+            <div class="row no-gutter">
+                <covid-recovery-tracker class="col-5 col-sm-6 col-md-12 col-lg-12 mb-4 rGutter" [loadingData]="loadingGlobalStats"
                     [errMessage]="globalStatsMessage" [affectedCount]="globalCaseCount.cases"
                     [recoveredCount]="globalCaseCount.recovered">
                 </covid-recovery-tracker>
-                <covid-tweets class="col-sm-6 col-md-12 col-lg-12 mb-4"></covid-tweets>
+                <covid-tweets class="col-7 col-sm-6 col-md-12 col-lg-12 mb-4"></covid-tweets>
             </div>
         </div>
     </div>

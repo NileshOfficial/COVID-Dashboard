@@ -115,3 +115,9 @@
     font-weight: 500;
     margin-top: 3px;
 }
+
+@media(max-width: 576px) {
+    .listView {
+        min-height: 350px;
+    }
+}

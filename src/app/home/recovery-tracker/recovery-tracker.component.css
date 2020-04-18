@@ -48,3 +48,20 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@media(max-width: 575px) {
+    .card > .count {
+        width: 50%;
+        text-align: center;
+    }
+
+    .card .affectedCount {
+        padding-right: 0;
+        border-right: none;
+        margin-bottom: 5px;
+    }
+
+    .card .recoveredCount {
+        padding-left: 0;
+    }
+}

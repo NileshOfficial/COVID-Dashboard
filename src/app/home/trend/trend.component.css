@@ -83,3 +83,17 @@
 .maxHeight {
     height: 100%;
 }
+
+@media(max-width: 400px) {
+    .header{
+        justify-content: flex-start;
+    }
+
+    .header h3 {
+        display: none;
+    }
+
+    .trend .stats {
+        display: none;
+    }
+}
