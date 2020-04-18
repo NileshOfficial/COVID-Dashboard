@@ -4,32 +4,100 @@
     padding-left: 0;
 }
 
+#total,
+#recovered,
+#active,
+#death,
+#countryRecord,
+#map,
+#trend,
+#carousel {
+    padding-right: 0.75rem !important;
+}
+
+#recovered,
+#active,
+#death,
+#map,
+#carousel,
+#recoveryTracker,
+#tweets {
+    padding-left: 0.75rem !important;
+}
+
+.test {
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.test #recoveryTracker,
+.test #tweets {
+    flex: 1;
+}
+
+
+
 @media (max-width: 1199px) {
     .container {
         max-width: 100%;
-        /* padding: 1.5rem; */
+    }
+}
+
+@media (max-width: 992px) {
+    #total,
+    #active,
+    #recovered,
+    #death,
+    #countryRecord,
+    #carousel,
+    #map,
+    #trend
+    {
+        padding-right: 0.75rem !important;
+    }
+
+    #recovered,
+    #death,
+    #recoveryTracker,
+    #tweets {
+        padding-left: 0.75rem !important;
+    }
+
+    #carousel,
+    #active,
+    #map {
+        padding-left: 0 !important;
+    }
+
+    #countryRecord {
+        min-height: 230px;
+    }
+
+    #carousel {
+        min-height: 185px;
     }
 }
 
 @media (max-width: 768px) {
-    covid-carousel {
-        order: 1;
+    #recovered,
+    #death,
+    #carousel,
+    #map,
+    #trend {
+        padding-right: 0 !important;
     }
-    covid-world-map {
-        order: 2;
+
+    #recoveryTracker {
+        padding-left: 0 !important;
+        padding-right: 0.75rem !important;
     }
-    covid-trend {
-        order: 3;
+
+    #carousel {
+        min-height: 230px;
     }
 }
 
 @media (max-width: 576px) {
-   
-    /* #countryRecord
-    #map
-    #trend
-    #carousel */
-
     #total,
     #active,
     #recoveryTracker {
@@ -43,10 +111,10 @@
 }
 
 @media (max-width: 450px) {
-    covid-recovery-tracker {
+    #recoveryTracker {
         display: none;
     }
-    covid-tweets.col-7 {
+    #tweets.col-7 {
         flex: 0 0 100%;
         max-width: 100%;
     }
