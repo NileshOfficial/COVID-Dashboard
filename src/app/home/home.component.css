@@ -1,30 +1,13 @@
-/* .container {
-    max-width: 1366px;
-} */
-
-/* .no-gutter {
-    margin-right: 0;
-    margin-left: 0;
-} */
 
 .no-gutter>[class*="col-"] {
     padding-right: 0;
     padding-left: 0;
 }
 
-@media (max-width: 450px) {
-    covid-recovery-tracker {
-        display: none;
-    }
-    covid-tweets.col-7 {
-        flex: 0 0 100%;
+@media (max-width: 1199px) {
+    .container {
         max-width: 100%;
-    }
-}
-
-@media (max-width: 576px) {
-    .rGutter {
-        padding-right: 1.5rem !important;
+        /* padding: 1.5rem; */
     }
 }
 
@@ -39,3 +22,37 @@
         order: 3;
     }
 }
+
+@media (max-width: 576px) {
+   
+    /* #countryRecord
+    #map
+    #trend
+    #carousel */
+
+    #total,
+    #active,
+    #recoveryTracker {
+        padding-right: 0.75rem !important;
+    }
+
+    #recovered,
+    #death {
+        padding-left: 0.75rem !important;
+    }
+}
+
+@media (max-width: 450px) {
+    covid-recovery-tracker {
+        display: none;
+    }
+    covid-tweets.col-7 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    #tweets {
+        padding-left: 0 !important;
+    }
+}
+
