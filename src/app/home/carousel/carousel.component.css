@@ -4,6 +4,11 @@
     justify-content: space-between;
 }
 
+.carouselItems {
+    display: flex;
+    height: 100%;
+}
+
 .banner {
     display: flex;
 }
@@ -66,6 +71,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 15px;
 }
 
 .marker {
