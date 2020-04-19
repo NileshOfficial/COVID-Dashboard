@@ -2,18 +2,38 @@
     <div class="row px-4 py-4">
         <div class="col-12 col-sm-12 col-md-8 col-lg-9">
             <div class="row no-gutter">
-                <covid-case-count id="total" class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 mb-4" heading="Total Cases" [count]="globalCaseCount.cases"
-                    [rise]="trend[0]" [loadingData]="loadingGlobalStats" [errMessage]="globalStatsMessage">
+                <covid-case-count id="total" class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 mb-4" heading="Total Cases" 
+                    [count]="globalCaseCount.cases"
+                    [rise]="trend[0]" 
+                    [loadingData]="loadingGlobalStats" 
+                    [errMessage]="globalStatsMessage"
+                    [imgPath]="'../../assets/images/Graph.svg'"
+                >
                 </covid-case-count>
-                <covid-case-count id="recovered" class="col-6 col-sm-6 col-lg-3 col-xl-3 mb-4" heading="Recovered" [count]="globalCaseCount.recovered"
-                    [rise]="trend[1]" [invertTrend]="true" [loadingData]="loadingGlobalStats"
-                    [errMessage]="globalStatsMessage">
+                <covid-case-count id="recovered" class="col-6 col-sm-6 col-lg-3 col-xl-3 mb-4" heading="Recovered" 
+                    [count]="globalCaseCount.recovered"
+                    [rise]="trend[1]" 
+                    [invertTrend]="true" 
+                    [loadingData]="loadingGlobalStats"
+                    [errMessage]="globalStatsMessage"
+                    [imgPath]="'../../assets/images/Graph-3.svg'"
+                >
                 </covid-case-count>
-                <covid-case-count id="active" class="col-6 col-sm-6 col-lg-3 col-xl-3 mb-4" heading="Active Cases" [count]="globalCaseCount.active"
-                    [rise]="trend[2]" [loadingData]="loadingGlobalStats" [errMessage]="globalStatsMessage">
+                <covid-case-count id="active" class="col-6 col-sm-6 col-lg-3 col-xl-3 mb-4" heading="Active Cases" 
+                    [count]="globalCaseCount.active"
+                    [rise]="trend[2]" 
+                    [loadingData]="loadingGlobalStats" 
+                    [errMessage]="globalStatsMessage"
+                    [imgPath]="'../../assets/images/Graph-1.svg'"
+                >
                 </covid-case-count>
-                <covid-case-count id="death" class="col-6 col-sm-6 col-lg-3 col-xl-3 mb-4" heading="Total Death" [count]="globalCaseCount.deaths"
-                    [rise]="trend[3]" [loadingData]="loadingGlobalStats" [errMessage]="globalStatsMessage">
+                <covid-case-count id="death" class="col-6 col-sm-6 col-lg-3 col-xl-3 mb-4" heading="Total Death" 
+                    [count]="globalCaseCount.deaths"
+                    [rise]="trend[3]" 
+                    [loadingData]="loadingGlobalStats" 
+                    [errMessage]="globalStatsMessage"
+                    [imgPath]="'../../assets/images/Graph-2.svg'"
+                >
                 </covid-case-count>
                 <covid-country-wise-records id="countryRecord" class="col-12 col-sm-6 col-md-12 col-lg-5 col-xl-5 mb-4"></covid-country-wise-records>
                 <covid-world-map id="map" class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 mb-4"></covid-world-map>

@@ -7,7 +7,9 @@
         </span>
         <h3>{{ count | numberFormat }}</h3>
     </div>
-    <img *ngIf="loadingData === false && !errMessage" class="trend" src="../../../assets/images/Graph-2.svg">
+    <span class="trend" *ngIf="loadingData === false && !errMessage">
+        <img src={{imgPath}}>
+    </span>
     <covid-loading *ngIf="loadingData && errMessage === ''" [height]="50" [width]="50"></covid-loading>
     <span *ngIf="errMessage" class="message">{{errMessage}}</span>
 </div>

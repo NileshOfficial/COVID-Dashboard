@@ -14,6 +14,7 @@ export class CaseCountComponent implements OnInit, OnChanges {
   @Input() invertTrend: boolean = false;
   @Input() loadingData: boolean = false;
   @Input() errMessage: string = '';
+  @Input() imgPath: string = '';
 
   indicatorConfig: Array<any>;
 
