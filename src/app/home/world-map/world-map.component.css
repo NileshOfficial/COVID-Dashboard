@@ -93,6 +93,10 @@
     width: 100%;
 }
 
+.map google-chart {
+    max-width: 100%;
+}
+
 .message {
     display: inline-block;
     width: 100%;
