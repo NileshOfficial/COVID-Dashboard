@@ -49,6 +49,40 @@
     transform: translate(-50%, -50%);
 }
 
+@media (min-width: 768px) and (max-width:820px) {
+    .card > .count {
+        width: 50%;
+        text-align: center;
+    }
+
+    .card .affectedCount {
+        padding-right: 0;
+        border-right: none;
+        margin-bottom: 5px;
+    }
+
+    .card .recoveredCount {
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1070px) {
+    .card > .count {
+        width: 50%;
+        text-align: center;
+    }
+
+    .card .affectedCount {
+        padding-right: 0;
+        border-right: none;
+        margin-bottom: 5px;
+    }
+
+    .card .recoveredCount {
+        padding-left: 0;
+    }
+}
+
 @media(max-width: 575px) {
     .card > .count {
         width: 50%;
