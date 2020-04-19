@@ -1,7 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpService } from '../services/http.service';
-import { newsData }  from '../services/response.model';
+import { newsData } from '../services/response.model';
 import { faCircle, faGlobeAmericas, IconDefinition, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import news from '../../assets/static/news.json';
 
 @Component({
   selector: 'covid-news-updates',
@@ -11,6 +12,7 @@ import { faCircle, faGlobeAmericas, IconDefinition, faArrowRight } from '@fortaw
 export class NewsUpdatesComponent implements OnInit, OnDestroy {
 
   private handle: any;
+  private err: boolean = false;
 
   newsData: newsData = null;
   separatorIcon: IconDefinition = faCircle;
@@ -22,7 +24,6 @@ export class NewsUpdatesComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.fetchArticles();
-    this.handle = setInterval(this.fetchArticles.bind(this), 100000);
   }
 
   fetchArticles() {
@@ -30,14 +31,17 @@ export class NewsUpdatesComponent implements OnInit, OnDestroy {
   }
 
   updateArticles(data) {
-    console.log(data);
     this.newsData = data;
+    if (!this.err)
+      this.handle = setInterval(this.fetchArticles.bind(this), 1800000);
   }
 
   errHandler(err: ErrorEvent) {
-    console.log(err);
-    if(!this.newsData)
-      this.errMessage = "error occurred, try refreshing the page.";
+    if (!this.newsData) {
+      this.err = true;
+      this.updateArticles(news);
+    }
+    // this.errMessage = "error occurred, try refreshing the page.";
     clearInterval(this.handle);
   }
 

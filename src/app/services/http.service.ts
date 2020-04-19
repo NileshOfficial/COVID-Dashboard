@@ -47,8 +47,11 @@ export class HttpService {
     getMapData(): Observable<Array<Array<any>>> {
         return this.http.get<countryWiseStats>(url.countryWiseCasesCountUrl, {
             params: new HttpParams().set("limit", "200")
-        }).pipe(map(response => {
-            let mappedData: Array<Array<any>>;
+        }).pipe(map(this.transformMapData.bind(this)));
+    }
+
+    transformMapData(response) {
+        let mappedData: Array<Array<any>>;
 
             response.data.rows.shift();
             let stats = response.data.rows;
@@ -57,37 +60,38 @@ export class HttpService {
                 return [country.country_abbreviation, Number(country.total_cases.split(",").join(''))];
             });
             return mappedData;
-        }));
     }
 
     getTimeSeriesData(): Observable<{cases: Array<any>, deaths: Array<any>, recovered: Array<any>}> {
         return this.http.get<timeseries>(url.timeseriesUrl)
-            .pipe(map(response => {
-                const timeseriesData = {
-                    cases: null, deaths: null, recovered: null
-                };
+            .pipe(map(this.transformTimeSeriesData.bind(this)));
+    }
 
-                let cases = [], deaths = [], recovered = [];
+    transformTimeSeriesData(response) {
+        const timeseriesData = {
+            cases: null, deaths: null, recovered: null
+        };
 
-                
-                cases = Object.keys(response.cases).map(entry => 
-                    [this.reformatDate(entry), response.cases[entry]]
-                );
+        let cases = [], deaths = [], recovered = [];
 
-                recovered = Object.keys(response.recovered).map(entry => 
-                    [this.reformatDate(entry), response.recovered[entry]]
-                );
-                
-                deaths = Object.keys(response.deaths).map(entry => 
-                    [this.reformatDate(entry), response.deaths[entry]]
-                );
+        
+        cases = Object.keys(response.cases).map(entry => 
+            [this.reformatDate(entry), response.cases[entry]]
+        );
 
-                timeseriesData.cases = cases;
-                timeseriesData.recovered = recovered;
-                timeseriesData.deaths = deaths;
+        recovered = Object.keys(response.recovered).map(entry => 
+            [this.reformatDate(entry), response.recovered[entry]]
+        );
+        
+        deaths = Object.keys(response.deaths).map(entry => 
+            [this.reformatDate(entry), response.deaths[entry]]
+        );
 
-                return timeseriesData;
-            }));
+        timeseriesData.cases = cases;
+        timeseriesData.recovered = recovered;
+        timeseriesData.deaths = deaths;
+
+        return timeseriesData;
     }
 
     private reformatDate(date: string) {

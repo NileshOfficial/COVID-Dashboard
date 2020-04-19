@@ -1,0 +1,144 @@
+{
+    "data": {
+        "paginationMeta": {
+            "currentPage": 1,
+            "currentPageSize": 10,
+            "totalPages": 22,
+            "totalRecords": 217
+        },
+        "last_update": "Apr, 18 2020, 23:24, UTC",
+        "rows": [
+            {
+                "country": "World",
+                "country_abbreviation": "",
+                "total_cases": "2,325,335",
+                "new_cases": "76,472",
+                "total_deaths": "160,448",
+                "new_deaths": "6,303",
+                "total_recovered": "595,519",
+                "active_cases": "1,569,368",
+                "serious_critical": "55,221",
+                "cases_per_mill_pop": "298.0",
+                "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/International_Flag_of_Planet_Earth.svg/800px-International_Flag_of_Planet_Earth.svg.png"
+            },
+            {
+                "country": "USA",
+                "country_abbreviation": "US",
+                "total_cases": "737,217",
+                "new_cases": "27,482",
+                "total_deaths": "38,932",
+                "new_deaths": "1,778",
+                "total_recovered": "67,438",
+                "active_cases": "630,847",
+                "serious_critical": "13,536",
+                "cases_per_mill_pop": "2,227.0",
+                "flag": "https://www.worldometers.info/img/flags/us-flag.gif"
+            },
+            {
+                "country": "Spain",
+                "country_abbreviation": "ES",
+                "total_cases": "191,726",
+                "new_cases": "887",
+                "total_deaths": "20,639",
+                "new_deaths": "637",
+                "total_recovered": "74,797",
+                "active_cases": "96,290",
+                "serious_critical": "7,371",
+                "cases_per_mill_pop": "4,101.0",
+                "flag": "https://www.worldometers.info/img/flags/sp-flag.gif"
+            },
+            {
+                "country": "Italy",
+                "country_abbreviation": "IT",
+                "total_cases": "175,925",
+                "new_cases": "3,491",
+                "total_deaths": "23,227",
+                "new_deaths": "482",
+                "total_recovered": "44,927",
+                "active_cases": "107,771",
+                "serious_critical": "2,733",
+                "cases_per_mill_pop": "2,910.0",
+                "flag": "https://www.worldometers.info/img/flags/it-flag.gif"
+            },
+            {
+                "country": "France",
+                "country_abbreviation": "FR",
+                "total_cases": "151,793",
+                "new_cases": "3,824",
+                "total_deaths": "19,323",
+                "new_deaths": "642",
+                "total_recovered": "35,983",
+                "active_cases": "96,487",
+                "serious_critical": "5,833",
+                "cases_per_mill_pop": "2,325.0",
+                "flag": "https://www.worldometers.info/img/flags/fr-flag.gif"
+            },
+            {
+                "country": "Germany",
+                "country_abbreviation": "DE",
+                "total_cases": "143,342",
+                "new_cases": "1,945",
+                "total_deaths": "4,459",
+                "new_deaths": "107",
+                "total_recovered": "85,400",
+                "active_cases": "53,483",
+                "serious_critical": "2,922",
+                "cases_per_mill_pop": "1,711.0",
+                "flag": "https://www.worldometers.info/img/flags/gm-flag.gif"
+            },
+            {
+                "country": "UK",
+                "country_abbreviation": "GB",
+                "total_cases": "84,279",
+                "new_cases": "0",
+                "total_deaths": "10,612",
+                "new_deaths": "0",
+                "total_recovered": "344",
+                "active_cases": "73,323",
+                "serious_critical": "1,559",
+                "cases_per_mill_pop": "1,241.0",
+                "flag": "https://www.worldometers.info/img/flags/uk-flag.gif"
+            },
+            {
+                "country": "China",
+                "country_abbreviation": "CN",
+                "total_cases": "82,160",
+                "new_cases": "108",
+                "total_deaths": "3,341",
+                "new_deaths": "2",
+                "total_recovered": "77,663",
+                "active_cases": "1,156",
+                "serious_critical": "121",
+                "cases_per_mill_pop": "57.0",
+                "flag": "https://www.worldometers.info/img/flags/ch-flag.gif"
+            },
+            {
+                "country": "Iran",
+                "country_abbreviation": "IR",
+                "total_cases": "71,686",
+                "new_cases": "0",
+                "total_deaths": "4,474",
+                "new_deaths": "0",
+                "total_recovered": "43,894",
+                "active_cases": "23,318",
+                "serious_critical": "3,930",
+                "cases_per_mill_pop": "853.0",
+                "flag": "https://www.worldometers.info/img/flags/ir-flag.gif"
+            },
+            {
+                "country": "Turkey",
+                "country_abbreviation": "TR",
+                "total_cases": "56,956",
+                "new_cases": "0",
+                "total_deaths": "1,198",
+                "new_deaths": "0",
+                "total_recovered": "3,446",
+                "active_cases": "52,312",
+                "serious_critical": "1,665",
+                "cases_per_mill_pop": "675.0",
+                "flag": "https://www.worldometers.info/img/flags/tu-flag.gif"
+            }
+        ]
+    },
+    "status": "success"
+}

@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { HttpService } from '../../services/http.service'
+import { HttpService } from '../../services/http.service';
+import timeSeries from '../../../assets/static/timeseries.json';
 
 @Component({
   selector: 'covid-trend',
@@ -20,9 +21,8 @@ export class TrendComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.refreshData();
-    this.intervalHandle = setInterval(this.refreshData.bind(this), 10000);
   }
-
+  
   refreshData(): void {
     this.http.getTimeSeriesData()
     .subscribe(this.updateTrendData.bind(this), this.handleError.bind(this));
@@ -31,11 +31,15 @@ export class TrendComponent implements OnInit, OnDestroy {
   updateTrendData(data): void {
     this.trendData = data;
     this.trendDataAvailable = true;
+    this.intervalHandle = setInterval(this.refreshData.bind(this), 10000);
   }
 
   handleError(err: ErrorEvent): void {
-    if(this.trendData.cases.length === 0)
-      this.errMessage = "error occurred, try refreshing the page";
+    if(this.trendData.cases.length === 0) {
+      // this.errMessage = "error occurred, try refreshing the page";
+      this.trendDataAvailable = true;
+      this.trendData = this.http.transformTimeSeriesData(timeSeries);
+    }
     clearInterval(this.intervalHandle);
   }
 

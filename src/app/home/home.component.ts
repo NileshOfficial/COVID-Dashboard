@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy, Renderer2, ViewChild, AfterViewInit, AfterViewChecked } from '@angular/core';
 import { HttpService } from '../services/http.service';
 import { globalCasesData } from '../services/response.model';
+import globalCases from '../../assets/static/globalCases.json';
 
 @Component({
   selector: 'covid-home',
@@ -10,6 +11,7 @@ import { globalCasesData } from '../services/response.model';
 export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
   private intervalHandle: any;
+  private err: boolean = false;
 
   @ViewChild('colLeft') colLeft;
   @ViewChild('recoveryTrackerDiv') recoveryTracker;
@@ -24,7 +26,6 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit(): void {
     this.fetchGlobalStats();
-    this.intervalHandle = setInterval(this.refreshData.bind(this), 5000);
   }
 
   ngAfterViewInit() {
@@ -53,11 +54,23 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
     this.globalCaseCount = data;
     this.loadingGlobalStats = false;
+    
+    if (!this.err) {
+      this.intervalHandle = setInterval(this.refreshData.bind(this), 5000);
+    }
   }
 
   handleGlobalStatsFetchError(err: ErrorEvent): void {
     if (!this.globalCaseCount.cases) {
-      this.globalStatsMessage = "error occurred, try refreshing page";
+      // this.globalStatsMessage = "error occurred, try refreshing page";
+      const data = {
+        cases: globalCases.cases,
+        recovered: globalCases.recovered,
+        active: globalCases.active,
+        deaths: globalCases.deaths
+      }
+      this.err = true;
+      this.updateGlobalCasesData(globalCases);
       this.loadingGlobalStats = false;
     }
     clearInterval(this.intervalHandle);

@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { HttpService } from '../../services/http.service';
 import { countryStatsRow } from '../../services/response.model';
 import { faCaretDown, faCaretUp, faSearch, faTimes, IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import countryWiseRecords from '../../../assets/static/map.json';
 
 @Component({
   selector: 'covid-country-wise-records',
@@ -62,7 +63,8 @@ export class CountryWiseRecordsComponent implements OnInit, OnDestroy {
   }
 
   private handleSearchErrResponse(err: ErrorEvent): void {
-    this.searchMessage = "Error Occurred, Try Again Later";
+    // this.searchMessage = "Error Occurred, Try Again Later";
+    this.updateSearchRecord(this.searchRecordOffline());
     this.searchingRecord = false;
   }
 
@@ -89,9 +91,14 @@ export class CountryWiseRecordsComponent implements OnInit, OnDestroy {
   private handleListFetchError(err: ErrorEvent): void {
     this.fetchingCountriesStats = false;
     if (this.countryStats.length === 0) {
-      this.statsListMessage = "Error Occurred, Try Refreshing Page";
-      clearInterval(this.handle);
+      this.countryStats = countryWiseRecords.data.rows;
+      // this.statsListMessage = "Error Occurred, Try Refreshing Page";
     }
+    clearInterval(this.handle);
+  }
+
+  private searchRecordOffline() {
+    return countryWiseRecords.data.rows.find(record => record.country === this.currentSearchQuery);
   }
 
   getNumber(str: string): number {

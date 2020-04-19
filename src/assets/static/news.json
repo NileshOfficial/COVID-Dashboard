@@ -1,0 +1,201 @@
+{
+    "status": "ok",
+    "totalResults": 15,
+    "articles": [
+        {
+            "source": {
+                "id": "google-news",
+                "name": "Google News"
+            },
+            "author": "Chicago Tribune staff",
+            "title": "Coronavirus in Illinois updates: Here’s what’s happening this weekend",
+            "description": "Here are the latest updates on the coronavirus in the Chicago area and Illinois this weekend.",
+            "url": "https://www.chicagotribune.com/coronavirus/ct-coronavirus-pandemic-chicago-illinois-news-20200418-6sccyfajcfg75epd5om5ezorni-story.html",
+            "urlToImage": "https://www.chicagotribune.com/resizer/1vtkRXTVeXTLioBG4_yFGXfVRx4=/1200x0/top/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/RVRNCNGDBFA5NM64J2XPJOWAR4",
+            "publishedAt": "2020-04-18T20:05:28+00:00",
+            "content": "Here are the latest updates on the coronavirus in the Chicago area and Illinois this weekend."
+        },
+        {
+            "source": {
+                "id": "google-news",
+                "name": "Google News"
+            },
+            "author": "Adam Shaw",
+            "title": "Pence tells Air Force Academy graduates they inspire confidence that 'we will prevail' against coronavirus",
+            "description": "Vice President Mike Pence on Saturday told Air Force Academy graduates that they will inspire Americans with the confidence that the country can overcome the “invisible enemy” in the form of the coronavirus crisis sweeping the country.",
+            "url": "https://www.foxnews.com/politics/pence-air-force-academy-graduates-prevail-against-coronavirus",
+            "urlToImage": "https://cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/1a11c785-e7fb-4f73-8200-b12540b2d710/1e518fd0-d961-4bbb-b0ef-ed3edfd7c1ec/1280x720/match/image.jpg",
+            "publishedAt": "2020-04-18T19:54:56+00:00",
+            "content": "Get all the latest news on coronavirus and more delivered daily to your inbox. Sign up here.\r\nVice President Mike Pence on Saturday told 2020 Air Force Academy graduates that they will inspire Americans with the confidence that the country can overcome the “i… [+2203 chars]"
+        },
+        {
+            "source": {
+                "id": "business-insider",
+                "name": "Business Insider"
+            },
+            "author": "Meghan Morris",
+            "title": "JLL cuts some WeWork cleaning staff in response to the coronavirus - Business Insider",
+            "description": "When WeWork outsourced cleaning staff in December, execs said benefits would be comparable. The severance is less than what laid-off WeWork staff got.",
+            "url": "http://www.businessinsider.com/jll-cuts-some-wework-cleaning-staff-response-to-coronavirus-slowdown-2020-4",
+            "urlToImage": "https://i.insider.com/5e9b429f0b3c9b3dda7f3b74?width=1200&format=jpeg",
+            "publishedAt": "2020-04-18T19:06:50Z",
+            "content": "WeWork's maintenance outsourcing provider has cut some of its cleaning staff even as buildings stay open during the coronavirus pandemic, per an email reviewed by Business Insider. \r\nJLL, one of the biggest real-estate services companies, laid off its communi… [+3143 chars]"
+        },
+        {
+            "source": {
+                "id": "google-news",
+                "name": "Google News"
+            },
+            "author": "Sophie Lewis",
+            "title": "Crowds flock to reopened Jacksonville beaches as Florida hits record coronavirus cases",
+            "description": "\"Florida morons\" trended on Twitter as people around the country criticized the decision to reopen beaches.",
+            "url": "https://www.cbsnews.com/news/coronavirus-crowds-flock-reopened-jacksonville-beaches-florida-2020-04-18/",
+            "urlToImage": "https://cbsnews2.cbsistatic.com/hub/i/r/2020/04/18/c9ecdd38-7b02-48cb-b45d-dc7cff3b9e2c/thumbnail/1200x630/d5ed4d6d7a61db056c73079a952ce48a/gettyimages-1219454710.jpg",
+            "publishedAt": "2020-04-18T18:56:47+00:00",
+            "content": "Mayor Lenny Curry reopened beaches and parks in Jacksonville, Florida on Friday, after Governor Ron DeSantis gave the green light for them to reopen, despite the state hitting a record number of coronavirus cases. When they opened at 5 p.m., crowds flooded th… [+2515 chars]"
+        },
+        {
+            "source": {
+                "id": "google-news",
+                "name": "Google News"
+            },
+            "author": "Tucker Higgins",
+            "title": "Cuomo says New York will grant marriage licenses remotely: 'There is now no excuse when the question comes up'",
+            "description": "New York Gov. Andrew Cuomo said the state will start granting marriage licenses remotely as lockdown measures designed to stop the spread of coronavirus remain in effect.",
+            "url": "https://www.cnbc.com/2020/04/18/coronavirus-cuomo-says-new-york-will-grant-marriage-licenses-remotely.html",
+            "urlToImage": "https://image.cnbcfm.com/api/v1/image/106495193-1587233685242gettyimages-1218120065.jpeg?v=1587233760",
+            "publishedAt": "2020-04-18T18:22:48+00:00",
+            "content": "New York Gov. Andrew Cuomo said the state will start granting marriage licenses remotely as lockdown measures designed to stop the spread of coronavirus remain in effect. \r\n\"There is now no excuse when the question comes up for marriage. No excuse,\" Cuomo sai… [+1337 chars]"
+        },
+        {
+            "source": {
+                "id": "business-insider",
+                "name": "Business Insider"
+            },
+            "author": "Jeremy Berke",
+            "title": "Cuomo says New York is 'past the plateau' as coronavirus hospitalizations continue to fall - Business Insider",
+            "description": "Despite the good news, another 540 New Yorkers died as a result of the virus on Saturday, and 2,000 more were admitted to hospitals in the state.",
+            "url": "http://www.businessinsider.com/coronavirus-cuomo-says-new-york-is-past-the-plateau-2020-4",
+            "urlToImage": "https://i.insider.com/5e9b3bf729d6d94d750ac514?width=1200&format=jpeg",
+            "publishedAt": "2020-04-18T17:56:05Z",
+            "content": "New York is curbing the spread of the coronavirus, though the epidemic has killed more than 13,300 people in the state.\r\n\"If you look at the past three days, you could argue we are past the plateau and starting to descend,\" Gov. Andrew Cuomo said in his daily… [+2648 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Jailed Iranian Instagram star 'has coronavirus'",
+            "description": "Sahar Tabar rose to fame over her pictures, which were said to resemble an eerie Angelina Jolie.",
+            "url": "http://www.bbc.co.uk/news/world-middle-east-52338496",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/35C1/production/_109316731_iranstar.jpg",
+            "publishedAt": "2020-04-18T15:37:23Z",
+            "content": "Image copyrightIRTV2Image caption\r\n Iranian TV broadcast an interview with Sahar Tabar after her arrest last year\r\nAn Iranian Instagram star has contracted coronavirus in prison, her lawyer says. \r\nFatemeh Khishvand, better known by her Instagram name Sahar T… [+2140 chars]"
+        },
+        {
+            "source": {
+                "id": "business-insider",
+                "name": "Business Insider"
+            },
+            "author": "Katie Warren, Taylor Borden",
+            "title": "Fisher Island: How America's richest ZIP code got coronavirus antibody tests - Business Insider",
+            "description": "To live on exclusive Fisher Island, residents pay a one-time fee of $250,000. The coronavirus is a whole different pandemic for the ultrarich.",
+            "url": "http://www.businessinsider.com/how-richest-zip-code-fisher-island-got-coronavirus-tests-2020-4",
+            "urlToImage": "https://i.insider.com/5e98869415ea4b53b407db56?width=1200&format=jpeg",
+            "publishedAt": "2020-04-18T15:07:00Z",
+            "content": "The only way to get to the richest place in the US is by ferry — or private yacht, if you have one.\r\nAs a 39-year-old father of two who lives on Fisher Island told Business Insider, \"Living on the island has one benefit: No one you don't want can come inside.… [+16042 chars]"
+        },
+        {
+            "source": {
+                "id": "business-insider",
+                "name": "Business Insider"
+            },
+            "author": "Kate Taylor",
+            "title": "Trump's restaurant recovery plan is built on fast food, chains - Business Insider",
+            "description": "Experts say smaller, independent restaurants will have the hardest time surviving the coronavirus pandemic.",
+            "url": "http://www.businessinsider.com/trumps-restaurant-recovery-plan-is-built-on-fast-food-chains-2020-4",
+            "urlToImage": "https://i.insider.com/5e73b271c4854011946367a3?width=1200&format=jpeg",
+            "publishedAt": "2020-04-18T13:00:00Z",
+            "content": "Business Insider\r\nPresident Trump — a noted fast-food fan — is creating an economic recovery plan that puts the country's chains front and center. \r\nThis week, Trump announced the formation of the \"Great American Economic Revival Industry Group\" for the resta… [+4707 chars]"
+        },
+        {
+            "source": {
+                "id": "google-news",
+                "name": "Google News"
+            },
+            "author": "Julia Musto",
+            "title": "'Liberate Minnesota' protest organizer: 'We want our rights restored,' despite coronavirus threat",
+            "description": "\"Liberate Minnesota\" protesters are calling for Democratic Governor Tim Walz to reopen the state's businesses and draw back the quarantine, protest organizer Michele Even explained Saturday.",
+            "url": "https://www.foxnews.com/media/liberate-minnesota-organizer-we-want-our-rights-restored",
+            "urlToImage": "https://static.foxnews.com/foxnews.com/content/uploads/2020/04/USE-THIS-.jpg",
+            "publishedAt": "2020-04-18T12:51:10+00:00",
+            "content": "Get all the latest news on coronavirus and more delivered daily to your inbox. Sign up here.\r\n\"Liberate Minnesota\" protesters are calling for Gov. Tim Walz to reopen businesses and end a stay-at-home order aimed at controlling the spread of coronavirus, organ… [+3093 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Japan doctors warn health system may 'break down'",
+            "description": "It comes as coronavirus cases in the country surge, leaving its doctors and hospitals stretched.",
+            "url": "http://www.bbc.co.uk/news/world-asia-52336388",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/E636/production/_111843985_gettyimages-1198669347.jpg",
+            "publishedAt": "2020-04-18T09:43:22Z",
+            "content": "Image copyrightGetty ImagesImage caption\r\n Japan, which initially appeared to have the virus under control, has recorded a flurry of new cases\r\nDoctors in Japan have warned that the country's medical system could collapse amid a wave of new coronavirus cases.… [+4923 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Coronavirus: 'Half of humanity' under social distancing curbs",
+            "description": "As world coronavirus deaths pass 150,000, more than 4.5 billion people are under containment to slow the pandemic.",
+            "url": "http://www.bbc.co.uk/news/live/world-52336209",
+            "urlToImage": "https://m.files.bbci.co.uk/modules/bbc-morph-news-waf-page-meta/4.1.2/bbc_news_logo.png",
+            "publishedAt": "2020-04-18T08:08:16.2311193Z",
+            "content": "The president's re-election campaign says it's still planning to hold rallies, despite warnings over large gatheringsImage caption: The president's re-election campaign says it's still planning to hold rallies, despite warnings over large gatherings\r\nAs the c… [+358 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Double warning over virus antibody tests",
+            "description": "Experts say screening may not prove immunity from coronavirus, and Britons are warned over unproven tests.",
+            "url": "http://www.bbc.co.uk/news/uk-52335210",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/10F30/production/_111842496_gettyimages-1209968955.jpg",
+            "publishedAt": "2020-04-18T04:32:55Z",
+            "content": "Image copyrightGetty Images\r\nHopes that coronavirus antibody tests could help the UK end its lockdown have been dealt a blow - after the World Health Organization questioned whether they offer any guarantee of immunity.\r\nThe UK has placed antibody tests - whi… [+3197 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Coronavirus: Star-studded concert to be aired",
+            "description": "More than 100 artists will be performing live from their homes in support of frontline workers.",
+            "url": "http://www.bbc.co.uk/news/entertainment-arts-52333890",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/7994/production/_111842113_c774eec8-2852-4fc3-ad1d-b83f6483239b.jpg",
+            "publishedAt": "2020-04-18T04:21:23Z",
+            "content": "Image copyrightALLSPORT/Getty ImagesImage caption\r\n The marathon event will be curated in collaboration with Lady Gaga\r\nA star-studded special concert is to be live-streamed and broadcast on TV to support frontline workers tackling the coronavirus outbreak.\r\n… [+1297 chars]"
+        },
+        {
+            "source": {
+                "id": "business-insider",
+                "name": "Business Insider"
+            },
+            "author": "John Haltiwanger",
+            "title": "Dr. Fauci throws cold water on conspiracy theory that coronavirus escaped a Chinese lab - Business Insider",
+            "description": "Fox News and Republican allies of President Donald Trump have been pushing the lab narrative hard in recent days, despite a lack of hard evidence.",
+            "url": "http://www.businessinsider.com/fauci-throws-cold-water-conspiracy-theory-coronavirus-escaped-chinese-lab-2020-4",
+            "urlToImage": "https://i.insider.com/5e9a563c92e8ba24d81a40b4?width=1200&format=jpeg",
+            "publishedAt": "2020-04-18T02:04:40Z",
+            "content": "Dr. Anthony Fauci, the nation's top expert on infectious disease, on Friday, rejected a conspiracy theory that the novel coronavirus escaped a Chinese lab. \r\n\"A group of highly-qualified evolutionary virologists looked at the sequences in bats as they evolve.… [+6557 chars]"
+        }
+    ]
+}
