@@ -72,13 +72,24 @@
     #countryRecord {
         min-height: 230px;
     }
-
-    #carousel {
-        min-height: 185px;
-    }
 }
 
 @media (max-width: 768px) {
+
+    #carousel {
+        order: 1;
+        padding-left: 0.75rem !important;
+        min-height: 230px;
+    }
+
+    #map {
+        order: 2;
+    }
+
+    #trend {
+        order: 2;
+    }
+
     #recovered,
     #death,
     #carousel,
@@ -90,10 +101,11 @@
     #recoveryTracker {
         padding-left: 0 !important;
         padding-right: 0.75rem !important;
+        margin-bottom: 0 !important;
     }
 
-    #carousel {
-        min-height: 230px;
+    #tweets {
+        margin-bottom: 0 !important;
     }
 }
 
@@ -107,6 +119,15 @@
     #recovered,
     #death {
         padding-left: 0.75rem !important;
+    }
+
+    #countryRecord {
+        padding-right: 0 !important;
+    }
+
+    #carousel {
+        min-height: 185px;
+        padding-left: 0 !important;
     }
 }
 
