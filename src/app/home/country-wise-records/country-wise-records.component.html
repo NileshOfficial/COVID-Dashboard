@@ -2,7 +2,8 @@
     <div class="header">
         <span class="search">
             <fa-icon [icon]="search"></fa-icon>
-            <input (keyup.enter)="onInput($event)" type="text" placeholder="Search Location">
+            <input (keyup.enter)="onInput($event)" type="text" placeholder="Search Location" #input>
+            <fa-icon class="close" [icon]="close" (click)="emptyField()"></fa-icon>
             <covid-loading *ngIf="searchingRecord" [height]="18" [width]="18"></covid-loading>
         </span>
         <span *ngIf="searchMessage !== ''" class="message">{{searchMessage}}</span>

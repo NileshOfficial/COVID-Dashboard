@@ -116,6 +116,10 @@
     margin-top: 3px;
 }
 
+.close {
+    cursor: pointer;
+}
+
 @media(max-width: 576px) {
     .listView {
         min-height: 350px;

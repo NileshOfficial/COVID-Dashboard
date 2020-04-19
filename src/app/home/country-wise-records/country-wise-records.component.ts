@@ -1,7 +1,7 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { HttpService } from '../../services/http.service';
 import { countryStatsRow } from '../../services/response.model';
-import { faCaretDown, faCaretUp, faSearch, IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { faCaretDown, faCaretUp, faSearch, faTimes, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'covid-country-wise-records',
@@ -9,6 +9,8 @@ import { faCaretDown, faCaretUp, faSearch, IconDefinition } from '@fortawesome/f
   styleUrls: ['./country-wise-records.component.css']
 })
 export class CountryWiseRecordsComponent implements OnInit, OnDestroy {
+
+  @ViewChild('input') input;
 
   private handle: any;
   private currentSearchQuery: string = '';
@@ -18,12 +20,12 @@ export class CountryWiseRecordsComponent implements OnInit, OnDestroy {
   search: IconDefinition = faSearch;
   rise: IconDefinition = faCaretUp;
   decline: IconDefinition = faCaretDown;
+  close: IconDefinition = faTimes;
 
   searchingRecord: boolean = false;
   fetchingCountriesStats: boolean = false;
   searchMessage: string = '';
   statsListMessage: string = '';
-
 
   constructor(private http: HttpService) { }
 
@@ -39,6 +41,11 @@ export class CountryWiseRecordsComponent implements OnInit, OnDestroy {
       this.currentSearchQuery = event.target.value.toLowerCase();
       this.searchCountry();
     }
+  }
+
+  emptyField() {
+    this.input.nativeElement.value = "";
+    this.resetSearch();
   }
 
   private searchCountry() {
