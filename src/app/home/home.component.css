@@ -1,41 +1,19 @@
-
 .no-gutter>[class*="col-"] {
     padding-right: 0;
     padding-left: 0;
 }
 
-#total,
-#recovered,
-#active,
-#death,
-#countryRecord,
-#map,
-#trend,
-#carousel {
+#total, #recovered, #active, #death, #countryRecord, #map, #trend, #carousel {
     padding-right: 0.75rem !important;
 }
 
-#recovered,
-#active,
-#death,
-#map,
-#carousel,
-#recoveryTracker,
-#tweets {
+#recovered, #active, #death, #map, #carousel, #recoveryTracker, #tweets {
     padding-left: 0.75rem !important;
 }
 
-.test {
-    flex-direction: column;
-    flex-wrap: nowrap;
+#trend, #carousel, #tweets {
+    margin-bottom: 0 !important;
 }
-
-.test #recoveryTracker,
-.test #tweets {
-    flex: 1;
-}
-
-
 
 @media (max-width: 1199px) {
     .container {
@@ -44,87 +22,64 @@
 }
 
 @media (max-width: 992px) {
-    #total,
-    #active,
-    #recovered,
-    #death,
-    #countryRecord,
-    #carousel,
-    #map,
-    #trend
-    {
+    #total, #active, #recovered, #death, #countryRecord, #carousel, #map, #trend {
         padding-right: 0.75rem !important;
     }
-
-    #recovered,
-    #death,
-    #recoveryTracker,
-    #tweets {
+    #recovered, #death, #recoveryTracker, #tweets {
         padding-left: 0.75rem !important;
     }
-
-    #carousel,
-    #active,
-    #map {
+    #carousel, #active, #map {
         padding-left: 0 !important;
     }
-
     #countryRecord {
         min-height: 230px;
+    }
+
+    #trend {
+        margin-bottom: 1.5rem !important;
+    }
+
+    #carousel {
+        min-height: 187px;
     }
 }
 
 @media (max-width: 768px) {
-
     #carousel {
         order: 1;
         padding-left: 0.75rem !important;
         min-height: 230px;
+        margin-bottom: 1.5rem !important;
     }
-
     #map {
         order: 2;
     }
-
     #trend {
         order: 2;
     }
-
-    #recovered,
-    #death,
-    #carousel,
-    #map,
-    #trend {
+    #recovered, #death, #carousel, #map, #trend {
         padding-right: 0 !important;
     }
-
     #recoveryTracker {
         padding-left: 0 !important;
         padding-right: 0.75rem !important;
         margin-bottom: 0 !important;
     }
-
     #tweets {
         margin-bottom: 0 !important;
     }
 }
 
 @media (max-width: 576px) {
-    #total,
-    #active,
-    #recoveryTracker {
+    #total, #active, #recoveryTracker {
         padding-right: 0.75rem !important;
     }
-
-    #recovered,
-    #death {
+    #recovered, #death {
         padding-left: 0.75rem !important;
     }
-
     #countryRecord {
         padding-right: 0 !important;
     }
-
     #carousel {
         min-height: 185px;
         padding-left: 0 !important;
@@ -139,9 +94,7 @@
         flex: 0 0 100%;
         max-width: 100%;
     }
-
     #tweets {
         padding-left: 0 !important;
     }
 }
-
