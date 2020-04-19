@@ -25,6 +25,12 @@
     width: calc(100% - 40px);
 }
 
+.header .search > input[type="text"]:hover,
+.header .search > input[type="text"]:focus {
+    outline: none;
+    border: none;
+}
+
 .message {
     display: inline-block;
     width: 100%;
