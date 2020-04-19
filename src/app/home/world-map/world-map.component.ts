@@ -1,5 +1,6 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { HttpService } from '../../services/http.service';
+import mapData from '../../../assets/static/map.json';
 
 @Component({
   selector: 'covid-world-map',
@@ -8,6 +9,7 @@ import { HttpService } from '../../services/http.service';
 })
 export class WorldMapComponent implements OnDestroy {
   private intervalHandle: any;
+  private err = false;
   public chartConfig = {
     title: 'Changing Chart',
     type: 'GeoChart',
@@ -32,7 +34,6 @@ export class WorldMapComponent implements OnDestroy {
   constructor(private http: HttpService) {
   }
 
-
   refreshData() {
     if(this.chartConfig.data.length === 0)
       this.loadingData = true;
@@ -46,14 +47,18 @@ export class WorldMapComponent implements OnDestroy {
   }
 
   handlerErrorResponse(err: ErrorEvent) {
-    if (this.chartConfig.data.length === 0)
-      this.errMessage = 'error occurred, try refreshing page';
+    if (this.chartConfig.data.length === 0) {
+      this.updateChartData(this.http.transformMapData(mapData));
+      this.err = true;
+      // this.errMessage = 'error occurred, try refreshing page';
+    }
     clearInterval(this.intervalHandle);
   }
 
   chartReady() {
     this.refreshData();
-    this.intervalHandle = setInterval(this.refreshData.bind(this), 100000);
+    if(!this.err)
+      this.intervalHandle = setInterval(this.refreshData.bind(this), 100000);
   }
 
   ngOnDestroy(): void {
