@@ -8,9 +8,13 @@
         </span>
     </div>
     <div class="trend" [ngClass]="{maxHeight: (!trendDataAvailable || errMessage)}">
-        <covid-loading class="absoluteCenter" *ngIf="!trendDataAvailable && !errMessage" [height]="50" [width]="50"></covid-loading>
+        <covid-loading class="absoluteCenter" *ngIf="!trendDataAvailable && !errMessage" [height]="50" [width]="50">
+        </covid-loading>
         <span *ngIf="errMessage" class="absoluteCenter message">{{errMessage}}</span>
-        <covid-line-chart *ngIf="trendDataAvailable && !errMessage" [chartData]="getCurrentTrend()" [lineColor]="trendColor"></covid-line-chart>
+        <div class="chartContainer">
+            <covid-line-chart *ngIf="trendDataAvailable && !errMessage" [chartData]="getCurrentTrend()"
+                [lineColor]="trendColor"></covid-line-chart>
+        </div>
         <span *ngIf="trendDataAvailable" class="stats" [ngStyle]="{color: trendColor}">
             <span class="trendType">{{ getTrendName() }}</span>
             <br>

@@ -33,6 +33,10 @@
     position: relative;
 }
 
+.trend .chartContainer {
+    overflow: auto;
+}
+
 .trend .stats {
     display: inline-block;
     position: absolute;
