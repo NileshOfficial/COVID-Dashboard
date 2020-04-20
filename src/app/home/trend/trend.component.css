@@ -34,7 +34,17 @@
 }
 
 .trend .chartContainer {
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.trend .chartContainer::-webkit-scrollbar {
+    width: 3px;
+    background: #dfe1e8;
+}
+
+.trend .chartContainer::-webkit-scrollbar-thumb {
+    background: #7a7d89;
 }
 
 .trend .stats {
