@@ -63,14 +63,16 @@
     word-spacing: 100rem;
 }
 
-.banner {
-    display: block;
-}
-
-@media (max-width: 2000px) {
+@media(max-width: 2000px) {
     .container { 
         max-width: 100%;
-    }   
+    }
+}
+
+@media (max-width: 1199px) {
+    .banner {
+        display: block;
+    }
 }
 
 @media (max-width: 991px) {
