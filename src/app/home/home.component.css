@@ -15,7 +15,7 @@
     margin-bottom: 0 !important;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 2000px) {
     .container {
         max-width: 100%;
     }

@@ -87,7 +87,7 @@
     text-transform: capitalize;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 2000px) {
     .container {
         max-width: 100%;
     }

@@ -162,7 +162,7 @@ ul {
     padding-left: 0.75rem !important;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 2000px) {
     .container {
         max-width: 100%;
     }
