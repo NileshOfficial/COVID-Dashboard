@@ -31,7 +31,7 @@ export class TrendComponent implements OnInit, OnDestroy {
   updateTrendData(data): void {
     this.trendData = data;
     this.trendDataAvailable = true;
-    this.intervalHandle = setInterval(this.refreshData.bind(this), 10000);
+    this.intervalHandle = setInterval(this.refreshData.bind(this), 100000);
   }
 
   handleError(err: ErrorEvent): void {

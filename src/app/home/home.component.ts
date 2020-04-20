@@ -56,7 +56,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     this.loadingGlobalStats = false;
     
     if (!this.err) {
-      this.intervalHandle = setInterval(this.refreshData.bind(this), 5000);
+      this.intervalHandle = setInterval(this.refreshData.bind(this), 100000);
     }
   }
 
